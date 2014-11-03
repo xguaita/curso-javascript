@@ -1,5 +1,5 @@
 curso-javascript
 ================
 
-Introducción a la programación con javascript 
+IntroducciÃ³n a la programaciÃ³n con javascript 
 

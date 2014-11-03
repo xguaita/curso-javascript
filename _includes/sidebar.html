@@ -10,16 +10,21 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Inicio</a>
-
+      <a class="sidebar-nav-item{% if page.title == " Inicio " %} active{% endif %}" href="{{ site.baseurl }}">Inicio</a>
       {% for modulo in site.data.modulos %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ modulo.folder }}">{{ modulo.titulo }}</a>
+      <a class="sidebar-nav-item{% if page.folder == modulo.folder %} active{% endif %}" href="{{ site.baseurl }}{{ modulo.folder }}">{{ modulo.titulo }}</a>
       {% endfor %}
 
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">Repositorio GitHub</a>
     </nav>
 
-    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
-	<p><a href="https://github.com/poole/hyde" >Hyde</a> Jekyll theme by Mark Otto</p>
+    <div class="sidebar-credits">
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+        </a>
+        <br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>.</p>
+      <p>Based on <a href="https://github.com/poole/hyde" target="_blank">Hyde</a> Jekyll theme by Mark Otto</p>
+    </div>
   </div>
 </div>
