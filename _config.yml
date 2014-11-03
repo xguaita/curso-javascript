@@ -1,0 +1,25 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            'Curso JavaScript'
+tagline:          'Curso JavaScript'
+description:      'Introducción a la programación con JavaScript'
+url:              http://xguaita.github.io/curso-javascript
+baseurl:          http://xguaita.github.io/curso-javascript/
+
+author:
+  name:           'Xisco Guaita'
+  url:            https://twitter.com/xguaita
+
+paginate:         5
+
+# Custom vars
+
+github:
+  repo:           https://github.com/xguaita/curso-javascript
