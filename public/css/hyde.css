@@ -55,7 +55,7 @@ html {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
   line-height: 1.25;
@@ -88,6 +88,13 @@ html {
 .sidebar-credits {
   font-size: 12px;
   text-align: center;
+}
+
+/* Credits section */
+.sidebar-credits img {
+  display: inline;
+  margin: 0;
+  border-radius: 0px;
 }
 
 /* Sidebar nav */
@@ -129,7 +136,7 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    2rem;
+/*  padding-top:    2rem;*/
   padding-bottom: 2rem;
 }
 
@@ -143,6 +150,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 64em) {
   .content {
+    max-width: 60rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }
