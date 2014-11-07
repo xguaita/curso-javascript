@@ -6,10 +6,10 @@ title: Inicio
 # Introducción a la programación con JavaScript
 
 ## Objetivos
-El objetivo del curso es dar los primeros pasos en el desarrollo de aplicaciones web. Para ello debemos:
+El objetivo del curso es dar los primeros pasos en el desarrollo de aplicaciones web. Para ello nos proponemos:
 
-+ Conocer el lenguaje de programación JavaScript  
-+ Familiarizarse con el uso de librerías
++ Conocer la sintaxis y semántica del lenguaje de programación JavaScript  
++ Ampliar su funcionalidad y facilitar el desarrollo con el uso de librerías
 + Adquirir los conocimientos básicos para desarrollar aplicaciones de _web mapping_
 
 Antes de empezar es importante dejar una cosa clara. No es lo mismo aprender un lenguaje de programación que aprender a programar. Programar es decirle a un ordenador lo que _queremos_ que haga mediante un programa escrito con un lenguaje que éste entiende (en nuestro caso Javascript). Al ejecutar el programa el ordenador hará lo que le hemos _dicho_ que haga (no lo que nosotros _queremos_).
@@ -22,7 +22,7 @@ Por una parte debemos memorizar la sintaxis y la semántica del lenguaje de prog
   > Programar no es sencillo, y el que diga lo contrario miente  
   > - Xisco G
 
-El curso es adecuado tanto para aquellas personas que, sabiendo programar, no conocen el lenguaje Javascript ni la programación de clientes web como aquellos que no han programado nunca.
+El curso es adecuado tanto para aquellas personas que, sabiendo programar, no conocen el lenguaje Javascript ni la programación de clientes web, como aquellos que no han programado nunca.
 
 ## Contenido
 
