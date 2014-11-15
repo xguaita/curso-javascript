@@ -117,8 +117,8 @@ A través de expresiones combinamos variables y valores mediante operadores para
 ### Operadores
 Lista ordenada por precedencia (de mayor a menor) de operadores:
 
- Operador | Operación | Asociatividad | Cardinalidad
-:-------: | :-------- | :-----------: | :----------:
+Operador | Operación | Asociatividad | Cardinalidad
+:------: | :-------- | :-----------: | :----------:
 `++,--` | Incremento, decremento (pre y post) | D | 1
 `+` | Convertir a número | D | 1
 `-` | Negar un número | D | 1
@@ -126,40 +126,40 @@ Lista ordenada por precedencia (de mayor a menor) de operadores:
 `delete` | Elimina una propiedad | D | 1
 `typeof` | Tipo de dato | D | 1
 
- Operador | Operación | Asociatividad | Cardinalidad
-:-------: | :-------- | :-----------: | :----------:
+Operador | Operación | Asociatividad | Cardinalidad
+:------: | :-------- | :-----------: | :----------:
 `*,/,%` | Multiplicar, dividir, resto | I | 2
 
- Operador | Operación | Asociatividad | Cardinalidad
-:-------: | :-------- | :-----------: | :----------:
+Operador | Operación | Asociatividad | Cardinalidad
+:------: | :-------- | :-----------: | :----------:
 `+,-` | Suma, resta | I | 2
 `+` | Concatenar texto | I | 2
 
- Operador | Operación | Asociatividad | Cardinalidad
-:-------: | :-------- | :-----------: | :----------:
+Operador | Operación | Asociatividad | Cardinalidad
+:------: | :-------- | :-----------: | :----------:
 `<,<=,>,>=` | Comparar números o texto | I | 2
 `instanceof` | Tipo de objeto | I | 2
 `in` | Existe propiedad | I | 2
 
- Operador | Operación | Asociatividad | Cardinalidad
-:-------: | :-------- | :-----------: | :----------:
+Operador | Operación | Asociatividad | Cardinalidad
+:------: | :-------- | :-----------: | :----------:
 `==,!=` | Igual, distinto | I | 2
 `===,!==` | Estrictamente igual, distinto | I | 2
 
- Operador | Operación | Asociatividad | Cardinalidad
-:-------: | :-------- | :-----------: | :----------:
+Operador | Operación | Asociatividad | Cardinalidad
+:------: | :-------- | :-----------: | :----------:
 `&&` | Y lógico | I | 2
 
- Operador | Operación | Asociatividad | Cardinalidad
-:-------: | :-------- | :-----------: | :----------:
+Operador | Operación | Asociatividad | Cardinalidad
+:------: | :-------- | :-----------: | :----------:
 `ᅵᅵ` | O lógico | I | 2
 
- Operador | Operación | Asociatividad | Cardinalidad
-:-------: | :-------- | :-----------: | :----------:
+Operador | Operación | Asociatividad | Cardinalidad
+:------: | :-------- | :-----------: | :----------:
 `?:` | Condicional | D | 3
 
- Operador | Operación | Asociatividad | Cardinalidad
-:-------: | :-------- | :-----------: | :----------:
+Operador | Operación | Asociatividad | Cardinalidad
+:------: | :-------- | :-----------: | :----------:
 `=` | Asignación | D | 2
 `*=,/=,+=,-=` | Opera y asigna | D | 2
 
