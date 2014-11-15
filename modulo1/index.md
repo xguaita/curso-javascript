@@ -67,7 +67,7 @@ var x, y;
 
   > **Buenas prácticas:** aunque no es obligatorio declarar las variables, hacerlo es conveniente ya que evita problemas de ámbito como veremos más adelante
 
-Los nombres de las variables deben empezar por una letra, <code>_</code> o <code>$</code>, no pueden empezar con un número ni cualquier otro símbolo. No se puede utilizar una [palabra reservada](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_keywords_as_of_ECMAScript_6). JavaScript es _case-sensitive_, es decir, distingue mayúsculas y minúsculas; no es lo mismo <code>miapp</code> que <code>miApp</code>.
+Los nombres de las variables deben empezar por una letra, <code>_</code> o <code>$</code>, no pueden empezar con un número ni cualquier otro símbolo. No se puede utilizar una <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_keywords_as_of_ECMAScript_6" target="_blank">palabra reservada</a>. JavaScript es _case-sensitive_, es decir, distingue mayúsculas y minúsculas; no es lo mismo <code>miapp</code> que <code>miApp</code>.
 
 Se asigna (guarda) un valor en una variable mediante el operador <code>=</code>.
 
@@ -125,25 +125,41 @@ Lista ordenada por precedencia (de mayor a menor) de operadores:
 !|Negar un booleano|D|1
 delete|Elimina una propiedad|D|1
 typeof|Tipo de dato|D|1
- | | | 
+
+ Operador | Operación | Asociatividad | Cardinalidad
+:--------:|:----------|:-------------:|:------------:
 *,/,%|Multiplicar, dividir, resto|I|2
- | | | 
+
+ Operador | Operación | Asociatividad | Cardinalidad
+:--------:|:----------|:-------------:|:------------:
 +,-|Suma, resta|I|2
 +|Concatenar texto|I|2
- | | | 
+
+ Operador | Operación | Asociatividad | Cardinalidad
+:--------:|:----------|:-------------:|:------------:
 <,<=,>,>=|Comparar números o texto|I|2
 instanceof|Tipo de objeto|I|2
 in|Existe propiedad|I|2
- | | | 
+
+ Operador | Operación | Asociatividad | Cardinalidad
+:--------:|:----------|:-------------:|:------------:
 ==,!=|Igual, distinto|I|2
 ===,!==|Estrictamente igual, distinto|I|2
- | | | 
+
+ Operador | Operación | Asociatividad | Cardinalidad
+:--------:|:----------|:-------------:|:------------:
 &&|Y lógico|I|2
- | | | 
+
+ Operador | Operación | Asociatividad | Cardinalidad
+:--------:|:----------|:-------------:|:------------:
 ᅵᅵ|O lógico|I|2
- | | | 
+
+ Operador | Operación | Asociatividad | Cardinalidad
+:--------:|:----------|:-------------:|:------------:
 ?:|Condicional|D|3
- | | | 
+
+ Operador | Operación | Asociatividad | Cardinalidad
+:--------:|:----------|:-------------:|:------------:
 =|Asignación|D|2
 *=,/=,+=,-=|Opera y asigna|D|2
 
@@ -170,7 +186,7 @@ console.log('a % b ', a % b);
 var nombre= 'Juan', apellido= 'García';
 console.log('Hola ' + nombre + ' ' + apellido);
 ```
-[repl.it](http://repl.it/4D3)
+<a href="http://repl.it/4D3" target="_blank">repl.it</a>
 
 A las instrucciones o comandos en un lenguaje de programación los denominamos sentencias. Así como las expresiones se evaluan para obtener un valor, las sentencias se ejecutan para realizar una acción. Un programa no es más que una secuencia de sentencias a ejecutar.
   > **Nota:** En JavaScript las sentencias se finalizan con punto y coma <code>;</code>
@@ -206,7 +222,7 @@ El condicional principal de JavaScript es <code>if/else</code>, también proporc
 
 #### if/else
 ```js
-if (condición) {
+if (condicion) {
   ...
 }
 ```
@@ -314,7 +330,7 @@ console.log('5 x 8 =', 40);
 console.log('5 x 9 =', 45);
 console.log('5 x 10 =', 50);
 ```
-[repl.it](http://repl.it/4Dh)
+<a href="http://repl.it/4Dh" target="_blank">repl.it</a>
 
 Perfecto! Pero... para qué escribimos un programa si hacemos nosotros todo el trabajo?
 
@@ -324,7 +340,7 @@ Los bucles permiten repetir bloques de código múltiples veces. JavaScript tien
 Es el bucle básico de JavaScript. Repite el bloque de código mientras se cumpla una condición.
 
 ```js
-while (condición) {
+while (condicion) {
   ...
 }
 ```
@@ -338,11 +354,12 @@ while (i <= 10) {
   i= i + 1; 
 }
 ```
-[repl.it](http://repl.it/4Dl)
+<a href="http://repl.it/4Dl" target="_blank">repl.it</a>
 
   > **Ejercicio:** escribir el mismo programa con una sola sentencia en el bloque del bucle.
-  > [Respuesta1](http://repl.it/4Do) [Respuesta2](http://repl.it/4Dp)
+  > <a href="http://repl.it/4Do" target="_blank">Resouesta 1</a>, <a href="http://repl.it/4Dp" target="_blank">respuesta 2</a>
 
+&nbsp;
 
   > **Buenas prácticas:** aunque podría parecer que es mejor el código más corto, en este caso, es más difícil de entender.
   > Es mejor que nos quedemos con la solución más sencilla y comprensible. Recordad que el código se ha de mantener (modificar), generalmente por otras personas y/o pasado un tiempo.
@@ -353,7 +370,7 @@ Ejecuta el bloque de código una vez y evalúa la condición, si es cierta itera
 ```js
 do {
   ...
-} while (condición)
+} while (condicion)
 ```
 
 Tabla del 5:
@@ -364,7 +381,7 @@ do {
   console.log('5 x ' + i + ' = ' + 5 * i);
 } while (++i <= 10);
 ```
-[repl.it](http://repl.it/4Dt)
+<a href="http://repl.it/4Dt" target="_blank">repl.it</a>
 
 #### for
 El bucle <code>for</code> simplifica el código de las iteraciones que siguen un patrón: aquellas que inicializan una contador (variable), comprueban su valor para seguir iterando y, finalmente, incrementan el contador. Justamente nuestro ejemplo. 
@@ -382,7 +399,7 @@ for (var i= 0; i <= 10; i++) {
   console.log('5 x ' + i + ' = ' + 5 * i);
 }
 ```
-[repl.it](http://repl.it/4Dv)
+<a href="http://repl.it/4Dv" target="_blank">repl.it</a>
 
   > **Ejercicio:** utilizando cualquier sentencia de iteración, escribir el programa que nos muestre cualquier tabla de multiplicar (del 1 al 10).
-  > [Respuesta](http://repl.it/4Dz)
+  > <a href="http://repl.it/4Dz" target="_blank">Respuesta</a>
