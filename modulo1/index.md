@@ -10,6 +10,7 @@ folder: modulo1
 Los programas trabajan manipulando datos, y los datos se representan mediante valores. Los lenguajes de programación categorizan los datos en tipos y tratan cada uno de ellos de diferente manera.
 
 JavaScript define 6 tipos de datos:  
+
 + Tipos de datos primitivos  
   + String  
   + Number  
@@ -21,6 +22,7 @@ JavaScript define 6 tipos de datos:
 ### String
 Cadena de caracteres (letras, dígitos y símbolos) que representa valores textuales. Las cadenas de  texto se encierran entre comillas simples (') o dobles (").
 El primer carácter de una cadena ocupa la posición 0. La cadena vacía se representa por <code>''</code> o <code>""</code>.
+
 ``` js
 "abcdefg"
 '07010'
@@ -28,15 +30,18 @@ El primer carácter de una cadena ocupa la posición 0. La cadena vacía se repr
 "Curs d'organització del temps"
 '<img src="./images/logo.png" target="_blank">'
 ```
+
 ### Number
 Los números se utilizan para contar y calcular.
 Al contrario de otros lenguajes de programación, en Javascript sólo existe un tipo numérico que representa valores enteros entre −9007199254740992 (−2<sup>53</sup>) y 9007199254740992 (2<sup>53</sup> -1), y decimales tan grandes como ±1.7976931348623157 × 10<sup>308</sup> y tan pequeños como ±5 × 10<sup>−324</sup>.
+
 ``` js
 100
 3.1415
 6.02e23
 1.4738223E-32
 ```
+
 ### Boolean
 Tipo de datos lógico que representa _cierto_ o _falso_, _si_ o _no_, _encendido_ o _apagado_. Tiene dos valores posibles <code>true</code> y <code>false</code>.
 
@@ -53,41 +58,52 @@ Las funciones son objetos que tienen código ejecutable asociado a ellos.
 ## Variables
 La forma de guardar valores para posteriormente usarlos y manipularlos es mediante variables. Una variable es el nombre de un lugar donde se guardan datos.
 Antes de utilizar una variable se _debe_ declarar mediante la palabra reservada <code>var</code>.
+
 ```js
 var contador;
 var nombre;
 var x, y;
 ```
+
   > **Buenas prácticas:** aunque no es obligatorio declarar las variables, hacerlo es conveniente ya que evita problemas de ámbito como veremos más adelante
 
 Los nombres de las variables deben empezar por una letra, <code>_</code> o <code>$</code>, no pueden empezar con un número ni cualquier otro símbolo. No se puede utilizar una [palabra reservada](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_keywords_as_of_ECMAScript_6). JavaScript es _case-sensitive_, es decir, distingue mayúsculas y minúsculas; no es lo mismo <code>miapp</code> que <code>miApp</code>.
 
 Se asigna (guarda) un valor en una variable mediante el operador <code>=</code>.
+
 ```js
 contador= 0;
 nombre= 'Xisco';
 ```
+
 Se recupera el valor almacenado mediante el nombre de la variable.
+
 ```js
 nombre
 // devuelve 'Xisco'
 ```
-  > **Nota:** en JavaScript se utiliza <code>//</code> para escribir comentarios de una línea. Para comentar varias líneas se encierran entre <code>/*</code> y <code>*/</code>
+
+  > **Nota:** en JavaScript se utiliza <code>//</code> para escribir comentarios de una línea. Para comentar varias líneas se encierran entre <code>/\*</code> y <code>\*/</code>
+  
   > Es muy importante comentar el código. Los programas, con el tiempo, necesitan ser modificados (corregir errores, añadir nuevas funcionalidades, modificaciones de las existentes...) y los comentarios facilitan su comprensión, tanto a las personas que no los han escrito, como a los que sí lo han hecho.
   
 Se puede inicializar una variable (asignar un valor) cuando se declara.
+
 ```js
 var contador= 0;
 var nombre= 'Xisco';
 var x= 3, y= 10;
 ```
+
 Si no se le da un valor inicial a una variable cuando se declara éste es <code>undefined</code> hasta que, mediante código, se asigna uno.
 
 Las variables no se declaran con un tipo (como ocurre en lenguajes como C o Java), adquieren de forma dinámica el tipo del valor que almacenan.
+
 ```js
 var a= 1;
 a= 'texto';
 ```
+
   > **Buenas prácticas:** elegir nombres de variables que describan el valor que almacenan.
   > Para guardar el nombre de una persona mejor <code>nombre</code> que <code>aj25</code>
 
@@ -100,6 +116,7 @@ A través de expresiones combinamos variables y valores mediante operadores para
 
 ### Operadores
 Lista ordenada por precedencia (de mayor a menor) de operadores:
+
  Operador | Operación | Asociatividad | Cardinalidad
 :--------:|:----------|:-------------:|:------------:
 ++,--|Incremento, decremento (pre y post)|D|1
@@ -123,12 +140,12 @@ in|Existe propiedad|I|2
  | | | 
 &&|Y lógico|I|2
  | | | 
-\|\||O lógico|I|2
+ᅵᅵ|O lógico|I|2
  | | | 
 ?:|Condicional|D|3
  | | | 
 =|Asignación|D|2
-*=,/=,+=,-=|Opera y asigna
+*=,/=,+=,-=|Opera y asigna|D|2
 
 Asociatividad: orden en que se realizan las operaciones con igual precedencia (I: de izquierda a derecha, D: de derecha a izquierda).
 
@@ -207,6 +224,7 @@ if (a % 2 == 0) {
 ```
 
 Si queremos que se ejecuten instrucciones cuando la condición no se cumpla añadimos <code>else</code>:
+
 ```js
 if (a > 0) {
   console.log('a es mayor que 10');
@@ -228,8 +246,10 @@ if (a < 0) {
   console.log('a es mayor que 100');
 }
 ```
+
 #### switch
 La sentencia <code>switch</code> evalúa una expresión, compara su resultado con los valores de la cláusula <code>case</code> y ejecuta el bloque de sentencias si son iguales. 
+
 ```js
 switch (expresión) {
   case valor1:
@@ -246,7 +266,9 @@ switch (expresión) {
     ...
 }
 ```
+
 Ejemplos:
+
 ```js
 switch (tipo) {
   case 0:
@@ -278,6 +300,7 @@ switch (dia) {
 
 ### Bucles
 Supongamos que queremos escribir la tabla de multiplicar de 5. Una opción sería repetir 10 veces cada línea de la tabla con los valores adecuados:
+
 ```js
 console.log('5 x 0 =', 0);
 console.log('5 x 1 =', 5);
@@ -299,6 +322,7 @@ Los bucles permiten repetir bloques de código múltiples veces. JavaScript tien
 
 #### while
 Es el bucle básico de JavaScript. Repite el bloque de código mientras se cumpla una condición.
+
 ```js
 while (condición) {
   ...
@@ -306,6 +330,7 @@ while (condición) {
 ```
 
 Tabla del 5:
+
 ```js
 var i= 0;
 while (i <= 10) {
@@ -324,6 +349,7 @@ while (i <= 10) {
 
 #### do/while
 Ejecuta el bloque de código una vez y evalúa la condición, si es cierta itera.
+
 ```js
 do {
   ...
@@ -331,6 +357,7 @@ do {
 ```
 
 Tabla del 5:
+
 ```js
 var i= 0;
 do {
@@ -341,6 +368,7 @@ do {
 
 #### for
 El bucle <code>for</code> simplifica el código de las iteraciones que siguen un patrón: aquellas que inicializan una contador (variable), comprueban su valor para seguir iterando y, finalmente, incrementan el contador. Justamente nuestro ejemplo. 
+
 ```js
 for (inicialización; test; iteración) {
   ...
@@ -348,6 +376,7 @@ for (inicialización; test; iteración) {
 ```
 
 Tabla del 5:
+
 ```js
 for (var i= 0; i <= 10; i++) {
   console.log('5 x ' + i + ' = ' + 5 * i);
