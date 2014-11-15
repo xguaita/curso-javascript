@@ -118,50 +118,50 @@ A través de expresiones combinamos variables y valores mediante operadores para
 Lista ordenada por precedencia (de mayor a menor) de operadores:
 
  Operador | Operación | Asociatividad | Cardinalidad
-:--------:|:----------|:-------------:|:------------:
-`++,--`|Incremento, decremento (pre y post)|D|1
-`+`|Convertir a número|D|1
-`-`|Negar un número|D|1
-`!`|Negar un booleano|D|1
-`delete`|Elimina una propiedad|D|1
-`typeof`|Tipo de dato|D|1
+:-------: | :-------- | :-----------: | :----------:
+`++,--` | Incremento, decremento (pre y post) | D | 1
+`+` | Convertir a número | D | 1
+`-` | Negar un número | D | 1
+`!` | Negar un booleano | D | 1
+`delete` | Elimina una propiedad | D | 1
+`typeof` | Tipo de dato | D | 1
 
  Operador | Operación | Asociatividad | Cardinalidad
-:--------:|:----------|:-------------:|:------------:
-`*,/,%`|Multiplicar, dividir, resto|I|2
+:-------: | :-------- | :-----------: | :----------:
+`*,/,%` | Multiplicar, dividir, resto | I | 2
 
  Operador | Operación | Asociatividad | Cardinalidad
-:--------:|:----------|:-------------:|:------------:
-`+,-`|Suma, resta|I|2
-`+`|Concatenar texto|I|2
+:-------: | :-------- | :-----------: | :----------:
+`+,-` | Suma, resta | I | 2
+`+` | Concatenar texto | I | 2
 
  Operador | Operación | Asociatividad | Cardinalidad
-:--------:|:----------|:-------------:|:------------:
-`<,<=,>,>=`|Comparar números o texto|I|2
-`instanceof`|Tipo de objeto|I|2
-`in`|Existe propiedad|I|2
+:-------: | :-------- | :-----------: | :----------:
+`<,<=,>,>=` | Comparar números o texto | I | 2
+`instanceof` | Tipo de objeto | I | 2
+`in` | Existe propiedad | I | 2
 
  Operador | Operación | Asociatividad | Cardinalidad
-:--------:|:----------|:-------------:|:------------:
-`==,!=`|Igual, distinto|I|2
-`===,!==`|Estrictamente igual, distinto|I|2
+:-------: | :-------- | :-----------: | :----------:
+`==,!=` | Igual, distinto | I | 2
+`===,!==` | Estrictamente igual, distinto | I | 2
 
  Operador | Operación | Asociatividad | Cardinalidad
-:--------:|:----------|:-------------:|:------------:
-`&&`|Y lógico|I|2
+:-------: | :-------- | :-----------: | :----------:
+`&&` | Y lógico | I | 2
 
  Operador | Operación | Asociatividad | Cardinalidad
-:--------:|:----------|:-------------:|:------------:
-`ᅵᅵ`|O lógico|I|2
+:-------: | :-------- | :-----------: | :----------:
+`ᅵᅵ` | O lógico | I | 2
 
  Operador | Operación | Asociatividad | Cardinalidad
-:--------:|:----------|:-------------:|:------------:
-`?:`|Condicional|D|3
+:-------: | :-------- | :-----------: | :----------:
+`?:` | Condicional | D | 3
 
  Operador | Operación | Asociatividad | Cardinalidad
-:--------:|:----------|:-------------:|:------------:
-`=`|Asignación|D|2
-`*=,/=,+=,-=`|Opera y asigna|D|2
+:-------: | :-------- | :-----------: | :----------:
+`=` | Asignación | D | 2
+`*=,/=,+=,-=` | Opera y asigna | D | 2
 
 Asociatividad: orden en que se realizan las operaciones con igual precedencia (I: de izquierda a derecha, D: de derecha a izquierda).
 
@@ -388,7 +388,7 @@ do {
 El bucle `for` simplifica el código de las iteraciones que siguen un patrón: aquellas que inicializan una contador (variable), comprueban su valor para seguir iterando y, finalmente, incrementan el contador. Justamente nuestro ejemplo. 
 
 ```js
-for (inicialización; test; iteración) {
+for (inicializacion; test; iteracion) {
   ...
 }
 ```
@@ -403,4 +403,4 @@ for (var i= 0; i <= 10; i++) {
 <a href="http://repl.it/4Dv" target="_blank">repl.it</a>
 
   > **Ejercicio:** utilizando cualquier sentencia de iteración, escribir el programa que nos muestre cualquier tabla de multiplicar (del 1 al 10).
-  > <a href="http://repl.it/4Dz" target="_blank">Respuesta</a>
+  > <a href="http://repl.it/4Dz/1" target="_blank">Respuesta</a>
