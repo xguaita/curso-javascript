@@ -44,16 +44,16 @@ console.log('Longitud a:', a.length);
 
 Principales propiedades y métodos del objeto `String`:  
 
-| Propiedad | Descripción |
-| --------- | ----------- |
-| `length`| Longitud de la cadena de texto |
-| `indexOf(string), lastIndexOf(string)` | Devuelve el índice (posición) de la primera (o última) ocurrencia de un string, -1 si no lo encuentra |
-| `replace(regex, string)` | Busca y reemplaza un string por otro, trabaja con expresiones regulares |
-| `search(regex)` | Busca un texto dentro del string, si lo encuentra devuelve el índice si no -1, trabaja con expresiones regulares |
-| `split(string)` | Rompe un string en trozos mediante un _separador_ y los devuelve como un objeto `Array` |
-| `slice(indice1, indice2), substr(indice, longitud), substring(indice1, indice2)` | Devuelve una sección del string. De índice a índice (permite negativos), de índice y longitud, y de índice a índice, respectivamente |
-| `toLowerCase(), toUpperCase()` | Devuelve el string con todas las letras en minúsculas y mayúsculas, respectivamente |
-| `trim()` | Elimina los espacios iniciales y finales de un string |
+| Propiedad | Descripción |  
+| --------- | ----------- |  
+| `length`| Longitud de la cadena de texto |  
+| `indexOf(string), lastIndexOf(string)` | Devuelve el índice (posición) de la primera (o última) ocurrencia de un string, -1 si no lo encuentra |  
+| `replace(regex, string)` | Busca y reemplaza un string por otro, trabaja con expresiones regulares |  
+| `search(regex)` | Busca un texto dentro del string, si lo encuentra devuelve el índice si no -1, trabaja con expresiones regulares |  
+| `split(string)` | Rompe un string en trozos mediante un _separador_ y los devuelve como un objeto `Array` |  
+| `slice(indice1, indice2), substr(indice, longitud), substring(indice1, indice2)` | Devuelve una sección del string. De índice a índice (permite negativos), de índice y longitud, y de índice a índice, respectivamente |  
+| `toLowerCase(), toUpperCase()` | Devuelve el string con todas las letras en minúsculas y mayúsculas, respectivamente |  
+| `trim()` | Elimina los espacios iniciales y finales de un string |  
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">Ampliar información...</a>
 
@@ -78,22 +78,23 @@ Para crear un nuevo objeto `Date` JavaScript proporcioina cuatro constructores:
 
 ```js
 new Date(); // Fecha y hora actual
-new Date(número); // Número de milisegundos desde 1 de enero de 1970 UTC
+new Date(numero); // Número de milisegundos desde 1 de enero de 1970 UTC
 new Date(texto); // Fecha y hora en texto según YYYY-MM-DDTHH:mm:ss.sssZ (ISO 8601)
-new Date(año, mes[, día[, hora[, minutos[, segundos[, milisegundos]]]]]);
+new Date(anyo, mes[, dia[, hora[, minutos[, segundos[, milisegundos]]]]]);
 ```
+
 Principales métodos del objeto `Date` (hora local):  
 
-| Propiedad | Descripción |
-| --------- | ----------- |
-| `getDay(), getDate(), getMonth(), getFullYear()` | Devuelve el día de la semana (0-6), del mes, el mes (0-11) y el año, respectivamente en hora local |
-| `getHours(), getMinutes(), getSeconds(), getMilliseconds()` | Devuelve las horas, minutos, segundos y milisegundos, respectivamente |
-| `setDay(dia), setDate(dia), setMonth(mes), setFullYear(año)` | Establece el día de la semana (0-6), del mes, el mes (0-11) y el año, respectivamente |
-| `setHours(hora), setMinutes(minuto), setSeconds(segundo), setMilliseconds(milisegundo)` | Establece las horas, minutos, segundos y milisegundos, respectivamente |
-| `toString(), toDateString(), toTimeString()` | Devuelve fecha y hora, fecha , y hora, respectivamente |
-| `toLocaleString(), toLocaleDateString(), toLocaleTimeString()` | Devuelve fecha y hora, fecha , y hora con formato de sistema, respectivamente |
-| `toJSON(), toISOString()` | Devuelve fecha y hora en formato ISO 8601 |
-| `toUTCString()` | Devuelve fecha y hora UTC o GMT |
+| Propiedad | Descripción |  
+| --------- | ----------- |  
+| `getDay(), getDate(), getMonth(), getFullYear()` | Devuelve el día de la semana (0-6), del mes, el mes (0-11) y el año, respectivamente en hora local |  
+| `getHours(), getMinutes(), getSeconds(), getMilliseconds()` | Devuelve las horas, minutos, segundos y milisegundos, respectivamente |  
+| `setDay(dia), setDate(dia), setMonth(mes), setFullYear(año)` | Establece el día de la semana (0-6), del mes, el mes (0-11) y el año, respectivamente |  
+| `setHours(hora), setMinutes(minuto), setSeconds(segundo), setMilliseconds(milisegundo)` | Establece las horas, minutos, segundos y milisegundos, respectivamente |  
+| `toString(), toDateString(), toTimeString()` | Devuelve fecha y hora, fecha , y hora, respectivamente |  
+| `toLocaleString(), toLocaleDateString(), toLocaleTimeString()` | Devuelve fecha y hora, fecha , y hora con formato de sistema, respectivamente |  
+| `toJSON(), toISOString()` | Devuelve fecha y hora en formato ISO 8601 |  
+| `toUTCString()` | Devuelve fecha y hora UTC o GMT |  
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Ampliar información...</a>
 
@@ -118,16 +119,16 @@ Objeto que proporciona constantes y funciones matemáticas. Al contrario que los
 
 Algunas propiedades y métodos del objeto `Math`:  
 
-| Propiedad | Descripción |
-| --------- | ----------- |
-| `PI` | Número PI |
-| `sin(x), cos(x), tan(x)` | Seno, coseno y tangente, respectivamente |
-| `asin(x), acos(x), atan(x)` | Arcoseno, arcocoseno y arcotangente, respectivamente |
-| `max([x[,y[,…]]]), min([x[,y[,…]]])` | Máximo y mínimo de una lista de números, respectivamente |
-| `sqrt(x)` | Raiz cuadrada |
-| `pow(x,y)` | x<sup>y</sup> |
-| `round(x)` | Redondea a entero |
-| `random()` | Genera un un número aleatorio entre 0 y 1 |
+| Propiedad | Descripción |  
+| --------- | ----------- |  
+| `PI` | Número PI |  
+| `sin(x), cos(x), tan(x)` | Seno, coseno y tangente, respectivamente |  
+| `asin(x), acos(x), atan(x)` | Arcoseno, arcocoseno y arcotangente, respectivamente |  
+| `max([x[,y[,…]]]), min([x[,y[,…]]])` | Máximo y mínimo de una lista de números, respectivamente |  
+| `sqrt(x)` | Raiz cuadrada |  
+| `pow(x,y)` | x<sup>y</sup> |  
+| `round(x)` | Redondea a entero |  
+| `random()` | Genera un un número aleatorio entre 0 y 1 |  
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Ampliar información...</a>
 
@@ -189,16 +190,16 @@ console.log(a);
 
 Algunos métodos del objeto `Array`:
 
-| Propiedad | Descripción |
-| --------- | ----------- |
-| `concat(array/valores)` | Junta los dos arrays y devuelve el resultado |
-| `unshift(), push(valor)` | Añade un valor al principio y al final del array y devuelve la longitud, respectivamente |
-| `shift(), pop(valor)` | Recupera y elimina un valor al principio y al final del array, respectivamente |
-| `join(separador)` | Crea un string con los elementos del array |
-| `slice(indice1, indice2)` | Extrae una sección del array |
-| `reverse()` | Invierte el orden de los elementos |
-| `sort()` | Ordena los elementos |
-| `indexOf(valor[, indice]), lastIndexOf(valor[, indice])` | Busca un elemento y devuelve su índice o -1 si no lo encuentra, desde el principio o el final |
+| Propiedad | Descripción |  
+| --------- | ----------- |  
+| `concat(array/valores)` | Junta los dos arrays y devuelve el resultado |  
+| `unshift(), push(valor)` | Añade un valor al principio y al final del array y devuelve la longitud, respectivamente |  
+| `shift(), pop(valor)` | Recupera y elimina un valor al principio y al final del array, respectivamente |  
+| `join(separador)` | Crea un string con los elementos del array |  
+| `slice(indice1, indice2)` | Extrae una sección del array |  
+| `reverse()` | Invierte el orden de los elementos |  
+| `sort()` | Ordena los elementos |  
+| `indexOf(valor[, indice]), lastIndexOf(valor[, indice])` | Busca un elemento y devuelve su índice o -1 si no lo encuentra, desde el principio o el final |  
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Ampliar información...</a>
 
@@ -234,6 +235,7 @@ Las funciones pueden devolver un valor.
 
 ### Definir funciones
 Las funciones se definen con la palabra reservada `function`:
+
 ```js
 function nombreFunc([param1[, ...[, paramN]]]) { // Parámetros opcionales
   ...
@@ -245,6 +247,7 @@ function nombreFunc([param1[, ...[, paramN]]]) { // Parámetros opcionales
   > **Buenas prácticas:** el nombre de las funciones puede ser cualquier  identificador válido en JavaScript (mismas reglas que las variables). Las funciones realizan una acción por ello su nombre generalmente es un verbo o una frase que comienza por un verbo y, por convención, en minúscula. Cuando hay más de una palabra se separan por `_` o se escriben en _CamelCase_: `imprimir_todos` o `imprimirTodos`
 
 Ejemplos:
+
 ```js
 // console.log de los elementos de un array
 function logArray(a) {
@@ -301,6 +304,7 @@ JavaScript no verifica ni el número ni el tipo de los argumentos con que se inv
 Cuando se invoca una función con menos argumentos que los parámetros declarados, los parámetros adicionales tienen valor `undefined`. Es tarea de la función comprobarlo y proporcionar valores por defecto.
 
 Supongamos que si proporcionamos un sólo argumento (número de elementos) a la función `crearArray` crea números aleatorios entre 0 y 100.
+
 ```js
 // Crea array de n elementos de números aleatorios entre min y max (0-100)
 function creaArray(n, min, max) {
@@ -333,6 +337,7 @@ console.log(creaArray(10));
 
 #### Lista variable de argumentos
 Las funciones cuentan con una _propiedad_ denominada `arguments` que es un objeto con la lista de argumentos pasados a la función. Mediante su propiedad `length` obtenemos el número de argumentos y accedemos a ellos mediante su índice (como un array).
+
 ```js
 // Función que sólo  lista argumentos
 function listaArgumentos() {
@@ -381,6 +386,7 @@ console.log(c);
 <a href="http://repl.it/4Px/7" target="_blank">repl-it</a>
 
 Los parámetros son variables locales:
+
 ```js
 var a= 10;
 
