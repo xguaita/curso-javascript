@@ -4,7 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <script>
-    function getWeather(query) {
+    function getWeather() {
+      var query= document.getElementById('ciudad').value;
+      
       if (query === '') {
         alert('Texto en blanco');
         return;
@@ -42,8 +44,10 @@
   </script>
 </head>
 
-<body onload="getWeather('palma')">
-  <h1>Título</h1>
+<body>
+  <p>
+    Ciudad: <input type="text" id="ciudad"> <input type="button" value="Buscar" onclick="getWeather()">
+  </p>
   <div id="div_resp"></div>
 </body>
 
