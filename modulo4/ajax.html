@@ -33,7 +33,7 @@
           div_resp= document.getElementById('div_resp'),
           newHtml= '';
       
-      if (result.cod !== 200 || result.count === 0) {
+      if (result.cod !== '200' || result.count === 0) {
         div_resp.innerHTML= 'Ningún resultado';
         return;
       } else {
