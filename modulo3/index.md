@@ -7,13 +7,13 @@ folder: modulo3
 # Programación orientada a objetos
 En el tema anterior hemos hablado de los objetos predefinidos, en este trataremos los objetos de usuario y cómo podemos programar en JavaScript con técnicas de orientación a objetos _clásicas_.
 
-La programación orientada a objetos es un paradigma de programación que utiliza la abstracción (definir) para crear modelos basados en el mundo real.
+La programación orientada a objetos es un paradigma de programación que utiliza la abstracción para crear modelos basados en el mundo real.
 
-Terminología de la programación orientada a objetos:
+Terminología básica de la programación orientada a objetos:
 
 + Clase: define las propiedades y el comportamiento de un tipo de objetos (sus características). Por ejemplo _coche_
 
-+ Objeto: es la la instancia de una clase. Por ejemplo _el_ coche con matrícula _7777XXX_
++ Objeto: es la instancia (elemento concreto) de una clase. Por ejemplo _el_ coche con matrícula _7777XXX_
 
 + Propiedad: características de un objeto que definen su estado. Por ejemplo _color_
 
@@ -31,7 +31,7 @@ Terminología de la programación orientada a objetos:
 ## Creación de objetos
 Los objetos se pueden crear de tres formas diferentes:
 
-+ Literales: es la forma más fácil de crear objetos. Entre llaves `{}` se definen propiedades (nombre `:` valor) separadas por comas `,`. El valor de la propiedad es una expresión cuyo valor puede ser un dato primitivo u un objeto (recordar que la funciones son objetos).
++ Literales: es la forma más fácil de crear objetos. Entre llaves `{}` se definen propiedades (nombre `:` valor) separadas por comas `,`. El valor de la propiedad es una expresión cuyo valor puede ser un dato primitivo o un objeto (recordar que las funciones son objetos).
 
 ``` js
 // Objeto de usuario
@@ -113,9 +113,23 @@ Acceder a una propiedad que no existe devuelve `undefined`.
 Para saber si un objeto tiene una propiedad se utiliza el operador `in`.
 
 ### Crear y eliminar propiedades
-Podemos distinguir entre propiedades propias y heredadas. Para saber si es una propiedad propia se utiliza la propiedad `hasOwnProperty()`.
+Podemos distinguir entre propiedades propias y heredadas. Para saber si es una propiedad propia se utiliza el método `hasOwnProperty()`.
 
 En cualquier momento podemos crear nuevas propiedades y eliminar las propiedades propias, no las heredadas, mediante el operador `delete`.
+
+``` js
+var a= [];
+
+console.log('Tiene propiedad length?', 'length' in a);
+delete a.length;
+console.log('Tiene propiedad length?', 'length' in a);
+
+a.nueva_propiedad= 1000;
+console.log('Tiene propiedad nueva_propiedad?', 'nueva_propiedad' in a);
+delete a.nueva_propiedad;
+console.log('Tiene propiedad nueva_propiedad?', 'nueva_propiedad' in a);
+```
+<a href="http://repl.it/5Dc" target="_blank">repl.it</a>
 
 ## Creación de clases
 
@@ -180,13 +194,13 @@ var C3PO= {
 ```
   > **Nota:** las funciones en javascript tienen propiedades, igual que los objetos (las funciones son objetos). Cuando se ejecuta una función se _crea_ la propiedad `this` con el valor del objeto que ha invocado la función.  
   `this` siempre hace referencia a un objeto y no tiene asignado un valor hasta que un objeto invoca la función donde se define `this`.  
-  Cuando se llama a un constructor con el operador `new`, `this` hace referencia a nuevo objeto creado.
+  Cuando se llama a un constructor con el operador `new`, `this` hace referencia al nuevo objeto creado.
   
 <a href="http://repl.it/4bi" target="_blank">repl.it</a>
 
   > **Pregunta:** y si tenemos 100 robots?
 
-Tenemos que crear 100 objetos robot con todas sus características? Qué pasa si hemos demodificar un método, lo hemos de cambiar 100 veces? No, y aquí es donde introducimos el concepto de _clase_.
+Tenemos que crear 100 objetos robot con todas sus características? Qué pasa si hemos de modificar un método, lo hemos de cambiar 100 veces? NO, y aquí es donde introducimos el concepto de _clase_.
 
   > **Nota:** recordar que en JavaScript no existe la _clase_ como un componente del lenguaje. En JavaScript se puden definir _clases_ mediante funciones (denominadas _constructores_)
 
@@ -204,6 +218,7 @@ Los dos conceptos de `prototype` en JavaScript:
   2. Todos los objetos tienen la propiedad `prototype` que hace referencia a su _padre_, aquel objeto del cual han heredado sus propiedades.  El acceso a propiedades de un objeto se realiza mediante la técnica denominada encadenamiento de prototipos (_prototype chain_) gracias a la propiedad `prototype` del objeto
 
   > **Nota1:** todos los objetos en JavaScript heredan propiedades y métodos de `Object.prototype`, que son: `constructor`, `hasOwnProperty()`, `isPrototypeOf()`, `propertyIsEnumerable()`, `toLocaleString()`, `toString()`, y `valueOf()`
+  
   > **Nota2:** los objetos literales heredan propiedades y métodos de `Object.prototype`, los creados mediante `new` de la función _constructor_ correspondiente
 
 
@@ -470,3 +485,7 @@ var R2D2= new RobotArreglaTodo('R2D2'),
     C3PO= new RobotTraductor('C3PO');
 ```
 <a href="http://repl.it/4bm" target="_blank">repl.it</a>
+
+### _property-chain_
+
+![](./images/js_prototype.png)

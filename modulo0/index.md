@@ -9,18 +9,18 @@ JavaScript es probablemente el lenguaje de programación más utilizado en la ac
 
 Formalmente JavaScript se define como un lenguaje de **scripting** basado en **prototipos** con **tipado dinámico** y **funciones de primera clase**.  
   1. Interpretado (no compilado) en un entorno de ejecución (_run-time environment_)  
-  2. Sin clases, herencia mediante clonado de objetos  
+  2. Sin clases, herencia mediante prototipos y clonado de objetos  
   3. Modificación del tipo de dato de las variables y estructura de objetos en tiempo de ejecución  
-  4. Asignar funciones a variables o propiedades de objetos, funciones como parámetros, las funciones devuelven como valor una función
+  4. Asignar funciones a variables o propiedades de objetos, funciones como parámetros, las funciones pueden devolver como valor una función
 
-JavaScript no tiene ninguna relación con el lenguaje de programación Java, excepto similitudes en la sintaxis y construcciones. Cuando nació JavaScript Java estaba muy de moda y por cuestiones de marketing se decidió, de forma poco acertada, incluirlo en su nombre que inicialmente debía ser _LiveScript_.
+JavaScript no tiene ninguna relación con el lenguaje de programación Java, excepto similitudes en la sintaxis y construcciones. Cuando nació JavaScript Java estaba muy de moda y por cuestiones de marketing se decidió, de forma poco acertada, incluirlo en su nombre que debía ser _LiveScript_.
 
 ## Un poco de historia
 A finales de 1995 Netscape Communications Corporation en plena batalla con Microsoft por el dominio de las tecnologías web introduce en su navegador Netscape 2.0 el lenguaje JavaScript principalmente para interactuar con los _applets_ java, única forma en aquel momento de añadir interacción (programas) a una página web (contenido estático).
 
-A mediados de 1996 Microsoft añade soporte JavaScript (JScript) a su Internet Explorer 3. Y a finales de año, Nestcape envia a ECMA Internacional la especificación de JavaScript para su consideración como estándard de la industria. En junio de 1997 ve la luz la primera versión de **ECMAScript**, actualmente nos encontramos en la 5.1.
+A mediados de 1996 Microsoft añade soporte JavaScript (JScript) a su Internet Explorer 3; y, a finales de año, Nestcape envia a ECMA Internacional la especificación de JavaScript para su consideración como estándard de la industria. En junio de 1997 ve la luz la primera versión de **ECMAScript**, actualmente nos encontramos en la 5.1.
 
-En el 2000 Microsoft añade la tecnología **Ajax** a su navegador. Inmediatamente el resto de navegadores soportan el objeto _XMLHttpRequest_. 
+En el 2000 Microsoft añade la tecnología que posibilitará las técnicas **Ajax** a su navegador. Inmediatamente el resto de navegadores soportan el objeto _XMLHttpRequest_. 
 
 En 2004 Google lanza Gmail revolucionando la forma de diseñar aplicaciones web. Aplicación de una sola página (_single page application_, SPA) que aprovecha al máximo la tecnología Ajax y consigue una velocidad y adaptabilidad inédita hasta la época.
 
@@ -55,6 +55,10 @@ En estos últimos años:
 ## Arquitectura de una aplicación web moderna
 
 ![App web moderna](./images/modern_js_app.png)
+
+Separación de componentes: 
+
+![web stack](./images/web_stack.png)
 
 ## Herramientas
 Relación de herramientas de programación útiles para la programación de aplicaciones con tecnologías web, algunas de ellas las utilizaremos durante el curso:

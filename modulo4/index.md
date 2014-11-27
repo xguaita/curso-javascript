@@ -5,11 +5,11 @@ folder: modulo4
 ---
 
 # Javascript en el navegador
-Hasta ahora hemos descrito el lenguaje JavaScript própiamente dicho. Como ya sabemos se trata de un lenguaje interpretado que se ejecuta en un _entorno de ejecución_. En este tema estudiaremos la ejecución de JavaScript en el navegador y, por tanto, los _objetos de plataforma_ que proporciona dicho contexto.
+Hasta ahora hemos descrito el lenguaje JavaScript própiamente dicho. Como ya sabemos,  se trata de un lenguaje interpretado que se ejecuta en un _entorno de ejecución_. En este tema estudiaremos la ejecución de JavaScript en el navegador y, por tanto, los _objetos de plataforma_ que proporciona dicho contexto.
 
-  > **Nota:* el objetivo de este tema es conocer el contexto de ejecución de navegador y los API que proporciona a los programas escritos con JavaScript. No entraremos en detalle en la escritura de código ya que es preferible utilizar librerías que facilitan su uso, como veremos en el siguiente tema.
+  > **Nota:** el objetivo de este tema es conocer el contexto de ejecución de navegador y los API que proporciona a los programas escritos con JavaScript. No entraremos en detalle en la escritura de código ya que es preferible utilizar librerías que facilitan su uso, como veremos en el siguiente tema.
 
-Si observamos los sitios web nos daremos cuenta que se pueden clasificar en dos categorias:
+Si observamos los sitios web nos daremos cuenta que se pueden clasificar en dos grandes categorias:
 
 + Documentos web. Presentan información estática.  
   Se usa JavaScript para mejorar la experiencia de usuario (interactividad)
@@ -20,7 +20,7 @@ Si observamos los sitios web nos daremos cuenta que se pueden clasificar en dos 
 ![](../modulo0/images/web_stack.png)
 
 ## Rol de JavaScript en una página HTML
-// TODO: gráfico
+![](../modulo4/images/html-css-js.png)
 
 ### Incrustar Javascript
 + En la cabecera o el cuerpo del documento dentro de los tags `<script></script>`  
@@ -97,14 +97,14 @@ Principales métodos:
 A través del  objeto `window` se accede al nuevo conjunto de _Web APIs_ definidas al amparo de HTML5, como por ejemplo:
 
 + XMLHttpRequest: peticiones asincronas de información a servidores (Ajax)  
-+ Geolocation API: permite al navegador acceder a su localización  
++ Geolocation API: permite al navegador acceder a la geolocalización del dispositivo  
 + Web Sockets API: conexión a servidores mediante _streams_ bidireccionales  
 + IndexDB API: almacenar y recuperar objetos en bases de datos simples  
 + Filesystem API: lectura y escritura de ficheros  
 
 
 ## Document Object Model (DOM)
-El DOM es un API de los documentos HTML, XML y SVG. Proporciona una representación estructurada (en  forma de árbol) del documento HTML que genera el navegador cuando carga una página, y define la forma en que los programas pueden acceder a esta estructura para interactuar con ella: añadir, modificar o eliminar componentes.
+El DOM es el API de los documentos HTML, XML y SVG. Proporciona una representación estructurada (en  forma de árbol) del documento HTML que genera el navegador cuando carga una página, y define la forma en que los programas pueden acceder a esta estructura para interactuar con ella: añadir, modificar o eliminar componentes.
 
 El DOM se ha diseñado para ser independiente del lenguaje de programación que manipula sus componentes; nosotros accederemos mediante JavaScript pero existen implementaciones en diferentes lenguajes, como Python, Java, C++...
 
@@ -290,7 +290,7 @@ Hay tres formas de asignar manejadores de eventos a elementos:
 ``` html
 <img id="img1" src='logo.png' onclick="alert('Mensaje')">
 ```
-+ Propiedad del elemento ded DOM:  
++ Propiedad del elemento del DOM:  
 ``` js
 document.getElementById('img1').onclick = function() {
   alert('Mensaje')
@@ -307,9 +307,9 @@ document.getElementById('img1').addEventListener('click', function() {
 La función manejador siempre recibe un parámetro el objeto `event`. Este objeto siempre tiene una propiedad `type` que nos informa del tipo de evento. Dependiendo del tipo de evento puede tener propiedades adicionales. Por ejemplo el evento `click` añade las propiedades `target` (qué elemento ha recibido el click), `clientX/clientY` (coordenadas del ratón en el momento del click)...
 
 ### Propagación y captura de eventos
-Los eventos se propagan (_bubbling_) de las _hojas_ del árbol de DOM hacia la _raiz_. Mientras el evento se propaga hacia arriba todos los manejadores responderán al evento.
+Los eventos se propagan (_bubbling_) de las _hojas_ del árbol del DOM hacia la _raiz_. Mientras el evento se propaga hacia arriba todos los manejadores responderán al evento.
 
-Para interrumpir la propagación el manejador puede invocar el método `stopPropagation()`.
+Para interrumpir la propagación, el manejador puede invocar el método `stopPropagation()`.
 
 La captura de un evento implica invertir el orden de propagación, de la raiz hacia las hojas. Se captura un evento con el método `addEventListener()` definiendo el tercer parámetro a `true`.
 

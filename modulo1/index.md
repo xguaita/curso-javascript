@@ -84,8 +84,10 @@ nombre
 ```
 
   > **Nota:** en JavaScript se utiliza `//` para escribir comentarios de una línea. Para comentar varias líneas se encierran entre `/*` y `*/`
-  
-  > Es muy importante comentar el código. Los programas, con el tiempo, necesitan ser modificados (corregir errores, añadir nuevas funcionalidades, modificaciones de las existentes...) y los comentarios facilitan su comprensión, tanto a las personas que no los han escrito, como a los que sí lo han hecho.
+
+&nbsp;
+
+  > **Buenas prácticas:** es muy importante comentar el código. Los programas, con el tiempo, necesitan ser modificados (corregir errores, añadir nuevas funcionalidades, modificaciones de las existentes...) y los comentarios facilitan su comprensión, tanto a las personas que no los han escrito, como a los que sí lo han hecho
   
 Se puede inicializar una variable (asignar un valor) cuando se declara.
 
@@ -189,7 +191,12 @@ console.log('Hola ' + nombre + ' ' + apellido);
 <a href="http://repl.it/4D3" target="_blank">repl.it</a>
 
 A las instrucciones o comandos en un lenguaje de programación los denominamos sentencias. Así como las expresiones se evaluan para obtener un valor, las sentencias se ejecutan para realizar una acción. Un programa no es más que una secuencia de sentencias a ejecutar.
-  > **Nota:** En JavaScript las sentencias se finalizan con punto y coma `;`
+
+  > **Nota1:** En JavaScript las sentencias se finalizan con punto y coma `;`  
+  
+&nbsp;
+
+  > **Nota2:** la instrucción `console.log` escribe en la consola del entorno de ejecución JavaScript 
 
 ### Conversión de tipos
 JavaScript convierte dinámicamente los tipos de datos para poder evaluar expresiones.
@@ -199,10 +206,12 @@ var a= 10, b= '5';
 console.log('a + b ', a + b);
 console.log('a * b ', a * b);
 ```
+<a href="http://repl.it/5D9" target="_blank">repl.it</a>
+
 En la primera sentencia como una de las variables es textual (y todos los tipos de datos se pueden convertir a texto), la opción más segura es convertir la otra variable a texto y utilizar el operador `+` como concatenador de cadenas.
 En el segundo caso el operador `*` actúa sobre valores numéricos, la unica opción es intentar convertir las variable no numéricas en números. En este caso ha sido posible, si no se hubiese generado un error `NaN` (_Not a Number_).
 
-Se siguen las siguientes reglas deconversión:
+Se siguen las siguientes reglas de conversión:
 + A texto: siempre convierte a texto. Los objetos tienen el método `toString`, que veremos más adelante.
 + A número: si no puede convertir devuelve `NaN`. Casos especiales: `true` devuelve 1, `false, null, '', []` devuelve 0, y `undefined` devuelve `NaN`.
 + A booleano: `undefined, null, '', 0, -0, NaN` devuelven `false`, cualquier otro caso `true`.
@@ -228,6 +237,7 @@ if (condicion) {
 }
 ```
 Si la condición se cumple (la expresión se evalúa a `true`) se ejecuta el bloque de instrucciones. Si la condición no se cumple (`false`) no se ejecuta ninguna instrucción.
+
   > **Nota:** En JavaScript los bloques de instrucciones se encierran entre llaves `{...}`
 
 ```js
@@ -316,7 +326,7 @@ switch (dia) {
 ```
 
 ### Bucles
-Supongamos que queremos escribir la tabla de multiplicar de 5. Una opción sería repetir 10 veces cada línea de la tabla con los valores adecuados:
+Supongamos que queremos escribir la tabla de multiplicar del 5. Una opción sería repetir 10 veces cada línea de la tabla con los valores adecuados:
 
 ```js
 console.log('5 x 0 =', 0);

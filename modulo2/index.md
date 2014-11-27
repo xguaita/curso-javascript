@@ -11,11 +11,11 @@ En JavaScript todo lo que no es un string, un numero, `true`, `false`, `null` o 
 
   > **Nota:** JavaScript distingue entre valores primitivos (string, numero, booleano, `null` y `undefined`) que son _inmutables_ y el resto de objetos que son _mutables_ tratando a los primeros por **valor** y a los segundos por **referencia**.  
 
-Podemos distinguir entre tres categorías de objetos:  
+Podemos distinguir tres categorías o clases de objetos:  
 
-+ Objetos nativos definidos por la propia especificación JavaScript (ECMAScript). En este tema nos centraremos en ellos
-+ Objetos de plataforma, son aquellos que pone a nuestra disposición en entorno de ejecución (_runtime environment_) JavaScript, como el navegador o Node.js
-+ Objetos de usuario, que son aquellos que se crean durante la ejecución de código JavaScript
++ Objetos nativos definidos por la propia especificación JavaScript (ECMAScript). En este tema nos centraremos en ellos  
++ Objetos de plataforma, son aquellos que pone a nuestra disposición el entorno de ejecución (_runtime environment_) JavaScript, como el navegador o Node.js. Los estudiaremos en el tema _JavaScript en el navegador_  
++ Objetos de usuario, que son aquellos que se crean por programa durante la ejecución de código JavaScript. Veremos cómo crearlos en el próximo tema  
 
 A continuación estudiaremos los principales objetos nativos que define JavaScript.
 
@@ -40,11 +40,11 @@ console.log('Longitud a:', a.length);
 
 &nbsp;
 
-  > **Nota2:** a las propiedades de un objeto se accede mediante el operador punto `.` o los corchetes `[]` y nombre de la propiedad
+  > **Nota2:** a las propiedades de un objeto se accede mediante el operador punto `.` o los corchetes `[]` y nombre de la propiedad entre comillas (simples o dobles)
 
 Principales propiedades y métodos del objeto `String`:  
 
-| Propiedad | Descripción |  
+| Propiedad/método | Descripción |  
 | --------- | ----------- |  
 | `length`| Longitud de la cadena de texto |  
 | `indexOf(string), lastIndexOf(string)` | Devuelve el índice (posición) de la primera (o última) ocurrencia de un string, -1 si no lo encuentra |  
@@ -72,7 +72,7 @@ console.log('Rompe con espacios:', a.split(' '));
 <a href="http://repl.it/4H6" target="_blank">repl-it</a>
 
 ## Date
-El objeto `Date` representa un momento en el tiempo (fecha y hora).
+El objeto `Date` representa un instante en el tiempo (fecha y hora).
 
 Para crear un nuevo objeto `Date` JavaScript proporcioina cuatro constructores:
 
@@ -85,14 +85,14 @@ new Date(anyo, mes[, dia[, hora[, minutos[, segundos[, milisegundos]]]]]);
 
 Principales métodos del objeto `Date` (hora local):  
 
-| Propiedad | Descripción |  
+| Propiedad/método | Descripción |  
 | --------- | ----------- |  
-| `getDay(), getDate(), getMonth(), getFullYear()` | Devuelve el día de la semana (0-6), del mes, el mes (0-11) y el año, respectivamente en hora local |  
+| `getDay(), getDate(), getMonth(), getFullYear()` | Devuelve el día de la semana (0-6), del mes, el mes (0-11) y el año, respectivamente, en hora local |  
 | `getHours(), getMinutes(), getSeconds(), getMilliseconds()` | Devuelve las horas, minutos, segundos y milisegundos, respectivamente |  
 | `setDay(dia), setDate(dia), setMonth(mes), setFullYear(año)` | Establece el día de la semana (0-6), del mes, el mes (0-11) y el año, respectivamente |  
 | `setHours(hora), setMinutes(minuto), setSeconds(segundo), setMilliseconds(milisegundo)` | Establece las horas, minutos, segundos y milisegundos, respectivamente |  
-| `toString(), toDateString(), toTimeString()` | Devuelve fecha y hora, fecha , y hora, respectivamente |  
-| `toLocaleString(), toLocaleDateString(), toLocaleTimeString()` | Devuelve fecha y hora, fecha , y hora con formato de sistema, respectivamente |  
+| `toString(), toDateString(), toTimeString()` | Devuelve fecha y hora, fecha, y hora, respectivamente |  
+| `toLocaleString(), toLocaleDateString(), toLocaleTimeString()` | Devuelve fecha y hora, fecha, y hora con formato de sistema, respectivamente |  
 | `toJSON(), toISOString()` | Devuelve fecha y hora en formato ISO 8601 |  
 | `toUTCString()` | Devuelve fecha y hora UTC o GMT |  
 
@@ -119,7 +119,7 @@ Objeto que proporciona constantes y funciones matemáticas. Al contrario que los
 
 Algunas propiedades y métodos del objeto `Math`:  
 
-| Propiedad | Descripción |  
+| Propiedad/método | Descripción |  
 | --------- | ----------- |  
 | `PI` | Número PI |  
 | `sin(x), cos(x), tan(x)` | Seno, coseno y tangente, respectivamente |  
@@ -190,7 +190,7 @@ console.log(a);
 
 Algunos métodos del objeto `Array`:
 
-| Propiedad | Descripción |  
+| Método | Descripción |  
 | --------- | ----------- |  
 | `concat(array/valores)` | Junta los dos arrays y devuelve el resultado |  
 | `unshift(), push(valor)` | Añade un valor al principio y al final del array y devuelve la longitud, respectivamente |  
@@ -221,9 +221,11 @@ for (i in a) console.log(a[i]);
 ```
 <a href="http://repl.it/4L2/3" target="_blank">repl-it</a>
 
+  > **Nota:** el iterador `for/in` se utiliza para recorrer elementos en un `Array` y propiedades en un objeto
+
 
 ## Funciones 
-Cuando los programas crecen es frecuente utilizar múltiples veces las mismas instrucciones (validar fecha, ordenar elementos, calcular totales...). Si repetimos estos conjuntos de instrucciones se complica el programa ya que, por un lado, es más largo y por otro se se han de modificar las instrucciones repetidas se ha de hacer en todas ellas.
+Cuando los programas crecen es frecuente utilizar múltiples veces las mismas instrucciones (validar fecha, ordenar elementos, calcular totales...). Si repetimos estos conjuntos de instrucciones se complica el programa ya que, por un lado, es más largo; y por otro cuando se han de modificar las instrucciones repetidas se ha de hacer en todas ellas.
 
 La solución es agrupar bloques de código con una funcionalidad bien definida en **funciones**. Se definen una vez, se modifican en un único lugar y se ejecutan tantas veces como sea necesario.
 
@@ -231,7 +233,9 @@ En JavaScript las funciones son objetos.
 
 Las funciones son parametrizables, su definición puede incluir una lista de identificadores llamados _parámetros_ que actúan como variables locales en el bloque de código de la función. Al llamar a una función (_invocar_ o ejecutar la función) proporcionamos valores (_argumentos_) a los parámetros de la función.
 
-Las funciones pueden devolver un valor.
+Las funciones pueden devolver un valor, si lo hacen emplean la palabra reservada `return`.
+
+Se pueden asignar funciones a variables y a propiedades de objetos.
 
 ### Definir funciones
 Las funciones se definen con la palabra reservada `function`:
@@ -239,12 +243,12 @@ Las funciones se definen con la palabra reservada `function`:
 ```js
 function nombreFunc([param1[, ...[, paramN]]]) { // Parámetros opcionales
   ...
-  codigo de la función
+  codigo de la funcion
   ...
   return valor; // Opcional
 }
 ```
-  > **Buenas prácticas:** el nombre de las funciones puede ser cualquier  identificador válido en JavaScript (mismas reglas que las variables). Las funciones realizan una acción por ello su nombre generalmente es un verbo o una frase que comienza por un verbo y, por convención, en minúscula. Cuando hay más de una palabra se separan por `_` o se escriben en _CamelCase_: `imprimir_todos` o `imprimirTodos`
+  > **Buenas prácticas:** el nombre de las funciones puede ser cualquier identificador válido en JavaScript (mismas reglas que las variables). Las funciones realizan una acción por ello su nombre debería ser un verbo o una frase que comience por un verbo y, por convención, en minúscula. Cuando hay más de una palabra se separan por `_` o se escriben en _CamelCase_: `imprimir_todos` o `imprimirTodos` (mejor)
 
 Ejemplos:
 
@@ -269,7 +273,7 @@ console.log(1000000 + cubo(6));
 ```
 <a href="http://repl.it/4Px" target="_blank">repl-it</a>
 
-  > **Nota:** para que la función devuelva más de un valor devolver un objeto, por ejemplo un array (lista de valores)
+  > **Nota:** para que la función devuelva más de un valor hay que devolver un objeto, por ejemplo un array (lista de valores)
 
 ```js
 // Crea array de n elementos de números aleatorios entre min y max
@@ -339,7 +343,7 @@ console.log(creaArray(10));
 Las funciones cuentan con una _propiedad_ denominada `arguments` que es un objeto con la lista de argumentos pasados a la función. Mediante su propiedad `length` obtenemos el número de argumentos y accedemos a ellos mediante su índice (como un array).
 
 ```js
-// Función que sólo  lista argumentos
+// Función que sólo lista argumentos
 function listaArgumentos() {
   console.log('Argumentos:', arguments.length);
   
@@ -356,9 +360,9 @@ listaArgumentos([10, 20]);
   > <a href="http://repl.it/4Px/6" target="_blank">Respuesta</a>
 
 ### Alcance
-_Scope_ o alcance hace referencia a la visibilidad de las variables. Es un concepto importantísimo en la programación con JavaScript. Variables _globales_ tienen alcance global (todo el programa), variables _locales_ tienen alcance local (función en la que han sido definidas). Los parámetros de lasfunciones tienen alcance local al cuerpo dela función.
+_Scope_ o alcance hace referencia a la visibilidad de las variables. Es un concepto importantísimo en la programación con JavaScript. Variables _globales_ tienen alcance global (todo el programa), variables _locales_ tienen alcance local (función en la que han sido definidas). Los parámetros de las funciones tienen alcance local al cuerpo de la función.
 
-JavaScript es un lenguaje donde las funciones definen la visibilidad de las variables.
+JavaScript es un lenguaje donde **las funciones definen la visibilidad de las variables**. Todas las variables declaradas fuera de una función son variables globales.
 
 En el cuerpo de una función las variables locales (y los parámetros) tienen preferencia sobre las variables globales. Cuando declaramos una variable dentro de una función es obligatorio utilizar `var` para crear una variable local a la función, si no creamos una variable global.
 
@@ -407,3 +411,21 @@ console.log(a);
 
   > **Ejercicio:** escribir la función factorial a la que se le pasa un número y devuelve su <a href="http://es.wikipedia.org/wiki/Factorial" target="_blank">factorial</a>  
   > <a href="http://repl.it/4Px/10" target="_blank">Respuesta1</a>, <a href="http://repl.it/4Px/11" target="_blank">Respuesta2</a>
+
+Se pueden definir funciones dentro de funciones. Las funciones internas _ven_ las variables declaradas en las externas.
+
+``` js
+function externa() {
+  var a= 'variable local externa';
+  
+  // Definición de una función interna
+  function interna() {
+    console.log(a);
+  }
+  
+  interna(); // Invocar función interna
+}
+
+externa();
+```
+<a href="http://repl.it/5Da" target="_blank">repl-it</a>
