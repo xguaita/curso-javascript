@@ -14,4 +14,12 @@ Típico juego de cartas boca abajo donde hay que recordar la posición e ir haci
 
 <a href="http://rawgit.com/xguaita/curso-javascript/master/JQuery/memory/index.html" target="_blank">Jugar</a>
 
+### WeatherApp
+Demostración del uso de las librerías Extjs 4.2.1 y el patrón MVC en una aplicación de consulta de datos meteorológicos del servicio <a href="http://openweathermap.org/" target="_blank">OpenWeatherMap</a>.
+
+![](./images/weatherapp.png)
+
+<a href="http://rawgit.com/xguaita/curso-javascript/master/weatherapp/index.html" target="_blank">Abrir aplicación</a>
+
+
 
