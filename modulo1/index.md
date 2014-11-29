@@ -211,10 +211,10 @@ console.log('a * b ', a * b);
 En la primera sentencia como una de las variables es textual (y todos los tipos de datos se pueden convertir a texto), la opción más segura es convertir la otra variable a texto y utilizar el operador `+` como concatenador de cadenas.
 En el segundo caso el operador `*` actúa sobre valores numéricos, la unica opción es intentar convertir las variable no numéricas en números. En este caso ha sido posible, si no se hubiese generado un error `NaN` (_Not a Number_).
 
-Se siguen las siguientes reglas de conversión:
-+ A texto: siempre convierte a texto. Los objetos tienen el método `toString`, que veremos más adelante.
-+ A número: si no puede convertir devuelve `NaN`. Casos especiales: `true` devuelve 1, `false, null, '', []` devuelve 0, y `undefined` devuelve `NaN`.
-+ A booleano: `undefined, null, '', 0, -0, NaN` devuelven `false`, cualquier otro caso `true`.
+Se siguen las siguientes reglas de conversión:  
++ A texto: siempre convierte a texto. Los objetos tienen el método `toString`, que veremos más adelante.  
++ A número: si no puede convertir devuelve `NaN`. Casos especiales: `true` devuelve 1, `false, null, '', []` devuelve 0, y `undefined` devuelve `NaN`.  
++ A booleano: `undefined, null, '', 0, -0, NaN` devuelven `false`, cualquier otro caso `true`.  
 
 Cuando se utiliza el operador de igualdad `==` JavaScript realiza conversión de tipos para evaluar la expresión. Si se utiliza `===` no se realiza dicha conversión.
 

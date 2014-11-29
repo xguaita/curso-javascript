@@ -206,11 +206,11 @@ Algunos métodos del objeto `Array`:
 ```js
 var a= ['azul', 'rojo', 'verde', 'amarillo'];
 console.log('verde?', a.indexOf('verde'));
-console.log('negro?', a.indexOf('blanco'));
+console.log('negro?', a.indexOf('negro'));
 a.unshift('blanco');
 console.log(a.join('-'));
 ```
-<a href="http://repl.it/4L2/2" target="_blank">repl-it</a>
+<a href="http://repl.it/4L2/4" target="_blank">repl-it</a>
 
 Recorrer los elementos del array:
 
@@ -336,7 +336,7 @@ console.log(creaArray(10));
 
 &nbsp;
 
-  > **Ejercicio:** modificar la función añadir el caso de proporcionar dos argumentos (número de elementos y valor mínimo). Si no se proporciona el tercer parámetro éste debe ser el valor mínimo más 100.  
+  > **Ejercicio:** modificar la función, añadir el caso de proporcionar dos argumentos (número de elementos y valor mínimo). Si no se proporciona el tercer parámetro éste debe ser el valor mínimo más 100.  
   > <a href="http://repl.it/4Px/4" target="_blank">Respuesta</a>
 
 #### Lista variable de argumentos
