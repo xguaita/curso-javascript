@@ -11,3 +11,6 @@
     padding-left: 20px;
     padding-top: 20px;
 }
+.olControlLayerSwitcher .layersDiv {
+    background-color: #157fcc !important;
+}
