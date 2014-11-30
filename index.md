@@ -89,7 +89,7 @@ Mapas interactivos: Leaflet y OpenLayers
 
   ![](./images/weatherapp.png)
   
-  <a href="http://rawgit.com/xguaita/curso-javascript/master/JQuery/memory/index.html" target="_blank">Abrir...</a>
+  <a href="http://rawgit.com/xguaita/curso-javascript/master/weatherapp/index.html" target="_blank">Abrir...</a>
 
 
 ## Ampliar información
