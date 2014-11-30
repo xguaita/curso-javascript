@@ -197,6 +197,7 @@ Algunos métodos del objeto `Array`:
 | `shift(), pop(valor)` | Recupera y elimina un valor al principio y al final del array, respectivamente |  
 | `join(separador)` | Crea un string con los elementos del array |  
 | `slice(indice1, indice2)` | Extrae una sección del array |  
+| `splice(indice, numero)` | Elimina elementos del array |  
 | `reverse()` | Invierte el orden de los elementos |  
 | `sort()` | Ordena los elementos |  
 | `indexOf(valor[, indice]), lastIndexOf(valor[, indice])` | Busca un elemento y devuelve su índice o -1 si no lo encuentra, desde el principio o el final |  

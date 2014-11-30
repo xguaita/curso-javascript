@@ -71,7 +71,26 @@ JSON y Ajax
 ### [Más fácil con librerías](./modulo5/)
 Independencia del navegador y simplificación de acceso a objetos: JQuery  
 Interfaz de usuario y _framework_ MVC: Sencha Ext JS  
-Mapas interactivos: Leaflet
+Mapas interactivos: Leaflet y OpenLayers
+
+
+## Proyectos
++ Gestión bibliotecas años 80
+
+  ![](./images/biblioteca.png)
+
++ Memory
+
+  ![](./images/memory.png)
+
+  <a href="http://rawgit.com/xguaita/curso-javascript/master/JQuery/memory/index.html" target="_blank">Jugar...</a>
+
++ WeatherApp
+
+  ![](./images/weatherapp.png)
+  
+  <a href="http://rawgit.com/xguaita/curso-javascript/master/JQuery/memory/index.html" target="_blank">Abrir...</a>
+
 
 ## Ampliar información
 + **JavaScript: The Definitive Guide, Sixth Edition**  
