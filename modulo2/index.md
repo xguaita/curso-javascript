@@ -51,7 +51,7 @@ Principales propiedades y métodos del objeto `String`:
 | `replace(regex, string)` | Busca y reemplaza un string por otro, trabaja con expresiones regulares |  
 | `search(regex)` | Busca un texto dentro del string, si lo encuentra devuelve el índice si no -1, trabaja con expresiones regulares |  
 | `split(string)` | Rompe un string en trozos mediante un _separador_ y los devuelve como un objeto `Array` |  
-| `slice(indice1, indice2), substr(indice, longitud), substring(indice1, indice2)` | Devuelve una sección del string. De índice a índice (permite negativos), de índice y longitud, y de índice a índice, respectivamente |  
+| `slice(indice1[, indice2]), substr(indice[, longitud]), substring(indice1[, indice2])` | Devuelve una sección del string. De índice a índice (permite negativos), de índice a longitud, y de índice a índice, respectivamente |  
 | `toLowerCase(), toUpperCase()` | Devuelve el string con todas las letras en minúsculas y mayúsculas, respectivamente |  
 | `trim()` | Elimina los espacios iniciales y finales de un string |  
 
@@ -70,6 +70,9 @@ console.log('Mayúsculas:', a.toUpperCase());
 console.log('Rompe con espacios:', a.split(' '));
 ```
 <a href="http://repl.it/4H6" target="_blank">repl-it</a>
+
+  > **Ejercicio**: dada la cadena de texto `0123456789`, recuperar los tres primeros caracteres, los 3 últimos, y del índice 2 al 7 (incluido)  
+  > <a href="http://repl.it/5WG" target="_blank">Respuesta</a>
 
 ## Date
 El objeto `Date` representa un instante en el tiempo (fecha y hora).
@@ -113,6 +116,11 @@ console.log('ISO 8601', d.toISOString());
 
   > **Ejercicio:** dada la fecha actual, en qué día de la semana nos encontramos (lunes, martes...)?  
   > <a href="http://repl.it/4K8" target="_blank">Respuesta1</a>, <a href="http://repl.it/4Ka" target="_blank">Respuesta2</a>
+
+&nbsp;
+
+  > **Ejercicio:** dada cualquier fecha, devolverla formateada como dd-mm-yyyy  
+  > <a href="http://repl.it/5WQ" target="_blank">Respuesta</a>
 
 ## Math
 Objeto que proporciona constantes y funciones matemáticas. Al contrario que los anteriores no podemos crear nuevos objetos `Math`, existe un único objeto que podemos utilizar para realizar las operaciones matemáticas.
@@ -218,11 +226,24 @@ Recorrer los elementos del array:
 ```js
 var a= ['azul', 'rojo', 'verde', 'amarillo'];
 for (var i= 0; i < a.length; i++) console.log(a[i]);
-for (i in a) console.log(a[i]);
 ```
 <a href="http://repl.it/4L2/3" target="_blank">repl-it</a>
 
-  > **Nota:** el iterador `for/in` se utiliza para recorrer elementos en un `Array` y propiedades en un objeto
+  > **Ejercicio**: dada una cadena de texto y un carácter (o secuencia de caracteres), eliminar estos últimos de la cadena de texto  
+  > <a href="http://repl.it/5Vq" target="_blank">Respuesta</a>
+
+&nbsp;
+
+  > **Pregunta:** dado el siguiente código, cuál es el valor de b?  
+  > <a href="http://repl.it/5Wm" target="_blank">Respuesta</a>
+
+``` js
+var a= [100, 200, ['a', 'b']],
+    b= a[2];
+
+b[1]= 'X';
+a[2][2]= 'Y';
+```
 
 
 ## Funciones 
@@ -256,7 +277,7 @@ Ejemplos:
 ```js
 // console.log de los elementos de un array
 function logArray(a) {
-  for (i in a) console.log(a[i]);
+  for (var i= 0; i < a.length; i++) console.log(a[i]);
 }
 
 // x al cubo x*x*x
@@ -272,7 +293,7 @@ logArray(laborables);
 // invoca cubo en una expresión
 console.log(1000000 + cubo(6));
 ```
-<a href="http://repl.it/4Px" target="_blank">repl-it</a>
+<a href="http://repl.it/5Vl" target="_blank">repl-it</a>
 
   > **Nota:** para que la función devuelva más de un valor hay que devolver un objeto, por ejemplo un array (lista de valores)
 
@@ -295,7 +316,7 @@ console.log(creaArray(20, 1, 50));
 ```
 <a href="http://repl.it/4Px/1" target="_blank">repl-it</a>
 
-  > **Pregunta:** qué devuelve una función que no devuelve ningún valor (no tiene `return`)?
+  > **Pregunta:** qué devuelve una función que no devuelve ningún valor (no tiene `return` o éste no devuelve un valor)?
 
 &nbsp;
 
@@ -357,8 +378,8 @@ listaArgumentos([10, 20]);
 ```
 <a href="http://repl.it/4Px/5" target="_blank">repl-it</a>
 
-  > **Ejercicio:** escribir una función que devuelva el número mayor de todos los pasados como argumentos. Pista `Number.NEGATIVE_INFINITY` es el número más pequeño posible  
-  > <a href="http://repl.it/4Px/6" target="_blank">Respuesta</a>
+  > **Ejercicio:** escribir una función que devuelva el número mayor de todos los pasados como argumentos.  
+  > <a href="http://repl.it/5Wt" target="_blank">Respuesta</a>
 
 ### Alcance
 _Scope_ o alcance hace referencia a la visibilidad de las variables. Es un concepto importantísimo en la programación con JavaScript. Variables _globales_ tienen alcance global (todo el programa), variables _locales_ tienen alcance local (función en la que han sido definidas). Los parámetros de las funciones tienen alcance local al cuerpo de la función.

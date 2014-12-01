@@ -112,6 +112,8 @@ Acceder a una propiedad que no existe devuelve `undefined`.
 
 Para saber si un objeto tiene una propiedad se utiliza el operador `in`.
 
+Para saber el tipo de objeto se utiliza el operador `instanceof`.
+
 ### Crear y eliminar propiedades
 Podemos distinguir entre propiedades propias y heredadas. Para saber si es una propiedad propia se utiliza el método `hasOwnProperty()`.
 
@@ -485,6 +487,10 @@ var R2D2= new RobotArreglaTodo('R2D2'),
     C3PO= new RobotTraductor('C3PO');
 ```
 <a href="http://repl.it/4bm" target="_blank">repl.it</a>
+
+  > **Ejercicio:** necesitamos robots de combate. Definir una subclase `RobotCombate` con las siguientes características: deben `atacar` y `defender` activándose automáticamente; y estos robots no ayudan.   
+  > <a href="http://repl.it/5XD" target="_blank">Respuesta</a>
+
 
 ### _property-chain_
 
