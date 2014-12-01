@@ -21,7 +21,7 @@ No son objetivos de este curso:
 
 Requerimientos:
 
-+ Conocimientos de HTTP, CSS
++ Conocimientos de HTML, CSS
 
 
 Antes de empezar el curso es importante dejar una cosa clara. No es lo mismo aprender un lenguaje de programación que aprender a programar.
