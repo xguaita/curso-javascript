@@ -111,10 +111,14 @@ Mapas interactivos: Leaflet y OpenLayers
   David Sawyer McFarland. 2012 O’Reilly Media  
 + **Head First jQuery**  
   Ryan Benedetti y Ronan Cranley. 2011 O’Reilly Media  
-+ **Learning Ext JS 4**
-  Crysfel Villa, Armando Gonzalez. 2013 Packt Publishing  
++ **Practical Ext JS 4**  
+  Prabhu Sunderaraman. 2013 Apress  
 + **Leaflet Tips and Tricks**  
-  Malcolm Maclean. 2014 Leanpub. <a href="https://leanpub.com/leaflet-tips-and-tricks/read" target="_blank">Leer online</a>   
+  Malcolm Maclean. 2014 Leanpub. <a href="https://leanpub.com/leaflet-tips-and-tricks/read" target="_blank">Leer online</a>  
++ **OpenLayers Cookbook**  
+  Antonio Santiago. 2012 Packt Publishing  
++ **The book of OpenLayers 3. Theory & Practice**  
+  Antonio Santiago. 2014 Leanpub  
 + **97 Things Every Programmer Should Know**  
   Kevlin Henney. 2010 O’Reilly Media   
 + **Code Complete, Second Edition**  
