@@ -62,6 +62,7 @@ Principales propiedades y métodos del objeto `String`:
 | Propiedad/método | Descripción |  
 | --------- | ----------- |  
 | `length`| Longitud de la cadena de texto |  
+| `charAt(indice)`| Devuelve el carácter de la posición indicada |  
 | `indexOf(string), lastIndexOf(string)` | Devuelve el índice (posición) de la primera (o última) ocurrencia de un string, -1 si no lo encuentra |  
 | `replace(regex, string)` | Busca y reemplaza un string por otro, trabaja con expresiones regulares |  
 | `search(regex)` | Busca un texto dentro del string, si lo encuentra devuelve el índice si no -1, trabaja con expresiones regulares |  
