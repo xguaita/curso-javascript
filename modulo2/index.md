@@ -19,6 +19,21 @@ Podemos distinguir tres categorías o clases de objetos:
 
 A continuación estudiaremos los principales objetos nativos que define JavaScript.
 
+## Propiedades y funciones del objeto global
+Principales propiedades (valores) y funciones del _ámbito_ global:
+
+| Propiedad | Descripción |  
+| --------- | ----------- |  
+| `NaN`| No es un número (Not a Number) |  
+| `Infinity` | Valor infinito |  
+
+| Funciones | Descripción |  
+| --------- | ----------- |  
+| `eval(string)`| Evalúa código JavaScript |  
+| `isNaN(valor)` | Evalúa si valor es _NaN_ |  
+| `parseInt(string [,base])`| Devuelve el texto convertido en valor numérico entero o _NaN_ |  
+| `parseFloat(string)` | Devuelve el texto convertido en valor decimal o _NaN_ |  
+
 ## String
 Ademas del tipo de dato string JavaScript define el objeto `String` que ofrece un conjunto de propiedades muy útiles a la hora de trabajar con cadenas de texto.
 
