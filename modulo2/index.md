@@ -24,7 +24,7 @@ Principales propiedades (valores) y funciones del _ámbito_ global:
 
 | Propiedad | Descripción |  
 | --------- | ----------- |  
-| `NaN`| No es un número (_N_ot _a_ _N_umber) |  
+| `NaN`| No es un número (Not a Number) |  
 | `Infinity` | Valor infinito |  
 
 | Funciones | Descripción |  
