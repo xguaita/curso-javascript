@@ -215,11 +215,11 @@ En un lenguaje orientado a prototipos los objetos no son creados mediante la ins
 
 Los dos conceptos de `prototype` en JavaScript:
 
-  1. Todas las funciones tienen una propiedad llamada `prototype` a la cual se pueden añadir propiedades y métodos para implementar la **herencia**
+  1. Todas las funciones tienen una propiedad llamada `prototype`, un objeto al cual se pueden añadir propiedades y métodos para implementar la **herencia**
 
-  2. Todos los objetos tienen la propiedad `prototype` que hace referencia a su _padre_, aquel objeto del cual han heredado sus propiedades.  El acceso a propiedades de un objeto se realiza mediante la técnica denominada encadenamiento de prototipos (_prototype chain_) gracias a la propiedad `prototype` del objeto
+  2. Todos los objetos _tienen_ un **prototipo** que hace referencia a la propiedad _prototype_ de su _padre_, aquel objeto del cual han heredado sus propiedades.  El acceso a propiedades de un objeto se realiza mediante la técnica denominada encadenamiento de prototipos (_prototype chain_)
 
-  > **Nota1:** todos los objetos en JavaScript heredan propiedades y métodos de `Object.prototype`, que son: `constructor`, `hasOwnProperty()`, `isPrototypeOf()`, `propertyIsEnumerable()`, `toLocaleString()`, `toString()`, y `valueOf()`
+  > **Nota1:** todos los objetos en JavaScript heredan propiedades y métodos de `Object.prototype`, que son: `constructor`, `hasOwnProperty()`, `propertyIsEnumerable()`, `isPrototypeOf()`, `toLocaleString()`, `toString()`, y `valueOf()`
   
   > **Nota2:** los objetos literales heredan propiedades y métodos de `Object.prototype`, los creados mediante `new` de la función _constructor_ correspondiente
 
