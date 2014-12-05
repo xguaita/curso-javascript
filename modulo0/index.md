@@ -7,7 +7,8 @@ folder: modulo0
 # Qué es Javascript
 JavaScript es probablemente el lenguaje de programación más utilizado en la actualidad. Y el que tiene un futuro inmediato más prometedor.
 
-Formalmente JavaScript se define como un lenguaje de **scripting** basado en **prototipos** con **tipado dinámico** y **funciones de primera clase**.  
+Formalmente JavaScript se define como un lenguaje de **scripting** basado en **prototipos** con **tipado dinámico** y **funciones de primera clase**.
+
   1. Interpretado (no compilado) en un entorno de ejecución (_run-time environment_)  
   2. Sin clases, herencia mediante prototipos y clonado de objetos  
   3. Modificación del tipo de dato de las variables y estructura de objetos en tiempo de ejecución  
