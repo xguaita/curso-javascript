@@ -35,11 +35,10 @@
       
       if (result.cod !== '200' || result.count === 0) {
         div_resp.innerHTML= 'Ningún resultado';
-        return;
       } else {
-        for (var i= 0; i < result.list.length; i++) newHtml+= '<b>'+result.list[i].name+' ('+result.list[i].sys.country+'):</b> '+result.list[i].main.temp+' ºC<br>'
+        for (var i= 0; i < result.list.length; i++) newHtml+= '<b>'+result.list[i].name+' ('+result.list[i].sys.country+'):</b> '+result.list[i].main.temp+' ºC<br>';
+        div_resp.innerHTML= newHtml;
       }
-      div_resp.innerHTML= newHtml;
     }
   </script>
 </head>
