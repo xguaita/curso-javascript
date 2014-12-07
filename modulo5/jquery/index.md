@@ -88,6 +88,7 @@ $('a[href*=".com"]')
 ```
 ### Por visibilidad
 Desde la pestaña `Elements` seleccionar el tag `li` con `id="funcId"` y ocultarlo mediante el siguiente atributo de estilo `display: none;`.
+
 ``` js
 $('li:hidden')
 ```
