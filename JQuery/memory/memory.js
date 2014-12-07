@@ -8,7 +8,7 @@ var $cartaArriba = null, // Guarda la primera carta de una pareja de clicks
 
 
 function CrearCartas() {
-  var listaCartas = new Array(20);
+  var listaCartas = [20];
 
   // Crea la lista de multiplicaciones y resultados
   for (var i = 0; i < 10; i++) {
@@ -20,7 +20,7 @@ function CrearCartas() {
   listaCartas = shuffle(listaCartas);
 
   // Crea las cartas
-  for (var i = 0; i < 20; i++) {
+  for (i = 0; i < 20; i++) {
     $cartas.append('<div id=carta' + i + '><span>' + listaCartas[i] + '</span></div>');
   }
   // Añade un manejador del evento click a cada carta
@@ -49,7 +49,7 @@ function ClickCarta() {
     $carta_span = $carta.find("span");
 
   // No se puede hacer click en esta carta
-  $carta.unbind("click", ClickCarta);
+  $carta.off("click");
 
   // Contabiliza clicks
   numClicks++;
@@ -81,7 +81,7 @@ function ClickCarta() {
   } else if (numClicks == 40) { // Número máximo de intentos
     $texto_panel.html('Has llegado al máximo de intentos y sólo has conseguido ' + parejas + ' pareja' + (parejas > 1 ? 's' : ''));
     // Quita el manejador del evento click a todas las cartas
-    $cartas.children("div").unbind("click", ClickCarta);
+    $cartas.children("div").off("click");
   }
 
 }
