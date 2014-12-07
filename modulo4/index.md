@@ -497,16 +497,15 @@ La función `evalResp` trata la respuesta y actualiza parte del contenido de la 
 ``` js
 function evalResp(resp) {
   var result = JSON.parse(resp),
-      div_resp= document.getElementById('div_resp'),
-      newHtml= '';
+    div_resp= document.getElementById('div_resp'),
+    newHtml= '';
 
-  if (result.cod !== '200' || result.count === 0) {
-    div_resp.innerHTML= 'Ningún resultado';
-    return;
-  } else {
-    for (var i= 0; i < result.list.length; i++) newHtml+= '<b>'+result.list[i].name+' ('+result.list[i].sys.country+'):</b> '+result.list[i].main.temp+' ºC<br>'
-  }
-  div_resp.innerHTML= newHtml;
+    if (result.cod !== '200' || result.count === 0) {
+      div_resp.innerHTML= 'Ningún resultado';
+    } else {
+      for (var i= 0; i < result.list.length; i++) newHtml+= '<b>'+result.list[i].name+' ('+result.list[i].sys.country+'):</b> '+result.list[i].main.temp+' ºC<br>';
+      div_resp.innerHTML= newHtml;
+    }
 }
 ```
 
