@@ -1,7 +1,7 @@
 ---
 layout: default
 title: JQuery
-folder: modulo5
+folder: modulo5/jquery
 ---
 
 # JQuery
@@ -18,7 +18,7 @@ folder: modulo5
 ## Por qué JQuery?
 La primera razón de utilizar JQuery, o librerías similares como <a href="http://prototypejs.org/" target="_blank">prototype</a> o <a href="http://yuilibrary.com/" target="_blank">YUI</a>, es simple: **compatibilidad**. Los diferentes navegadores implementan de forma diferente el DOM a causa de la poca claridad con que están definidas algunas características del modelo en las <a href="http://www.w3.org/DOM/" target="_blank">especificaciones</a> del W3C. También hay diferencias en la cantidad de funcionalidades <a href="http://quirksmode.org/dom/core/" target="_blank">implementadas</a>. La librería se encarga de ocultar esas diferencias y evita la programación específica para cada familia de navegadores.
 
-La segunda es que su sintaxis está diseñada para facilitar (y simplificar) la navegación por el documento, la selección de objetos del DOM, el menejo de eventos, la creación de animaciones y el desarrollo de aplicaciones Ajax.
+La segunda es que su sintaxis está diseñada para facilitar (y simplificar) la navegación por el documento, la selección de objetos del DOM, el manejo de eventos, la creación de animaciones y el desarrollo de aplicaciones Ajax.
 
 ## Cómo usar JQuery?
 Primero hemos de cargar las librerías en su versión comprimida (producción) o descomprimida (desarrollo), y lo podemos hacer de dos formas:
@@ -35,16 +35,16 @@ Primero hemos de cargar las librerías en su versión comprimida (producción) o
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 ```
 
-Para poder acceder al DOM y manipular sus elementos hemos de asegurarnos que éstos se han cargado en su totalidad, para ello jquery tiene el evento de documento _ready_:
+Para poder acceder al DOM y manipular sus elementos hemos de asegurarnos que éstos se han cargado en su totalidad, para ello JQuery tiene el evento de documento _ready_:
 
 ```javascript
 $(document).ready(function() {
   // Código a ejecutar
 });
 ```
-Cuando el documento esté listo ejecuta el código. A diferencia del evento _onload_ del DOM, el evento _ready_ de jquery no espera a que se carguen todas las imágenes  e _iframes_ de la página por lo que es mucho más rápido.
+Cuando el documento esté listo ejecuta el código. A diferencia del evento _onload_ del DOM, el evento _ready_ de JQuery no espera a que se carguen todas las imágenes  e _iframes_ de la página por lo que es mucho más rápido.
 
-La sintaxis básica de jquery es ```$(selector).accion()```, seleccionar elementos para hacer algo con ellos, donde:
+La sintaxis básica de JQuery es ```$(selector).accion()```, seleccionar elementos para hacer algo con ellos, donde:
 
 - **$** es el acceso al objeto JQuery
 - **selector** condición de búsqueda
@@ -200,7 +200,7 @@ function getWeather() {
 ## Proyecto Memory
 Juego de cartas boca abajo donde hay que recordar la posición e ir haciendo parejas. En esta versión en lugar de imágenes se utilizan las tablas de multiplicar y se tienen como máximo 40 intentos para hacer las 10 parejas. Cada vez que se empieza un juego se selecciona aleatóriamente el valor del multiplicando entre 2 y 9.
 
-![](../images/memory.png)
+![](../../images/memory.png)
 
   <a href="http://rawgit.com/xguaita/curso-javascript/master/JQuery/memory/index.html" target="_blank">Jugar...</a>
 
@@ -395,7 +395,7 @@ function shuffle(array) {
 }
 ```
 
-Al hacer click a una carta, mediante `$(this)` accedemos a la carta en en cuestión (al contenedor `div`). 
+Al hacer click a una carta, mediante `$(this)` accedemos a la carta en cuestión (al contenedor `div`). 
 
 Lo primero es impedir que se vuelva a hacer click en la misma carta, para ello eliminamos el evento; contabilizamos los clicks y actualizamos el panel de mensajes de texto; y visualizamos la carta.
 
