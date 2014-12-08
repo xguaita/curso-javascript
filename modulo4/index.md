@@ -369,7 +369,7 @@ Sus principales propiedades y métodos son:
 #### same-origin policy
 Define una politica de seguridad de los navegadores que previene que el documento o código cargado de un sitio web (origen) pueda interactuar con un recurso de un origen distinto. Por origen se entiende la misma combinación de protocolo, host y puerto.
 
-Qué recursos es lícito cargar desde otros orígenes?
+Qué recurso es lícito cargar desde otros orígenes?
 
 + JavaScript con `<script src="..."></script>`  
 + CSS con `<link rel="stylesheet" href="...">`  
