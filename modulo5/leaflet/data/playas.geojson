@@ -1,0 +1,54 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "properties": {
+      "Nombre": "Es Trenc",
+      "Foto": "http://mw2.google.com/mw-panoramio/photos/small/59556095.jpg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.9831314086914062, 39.3456154431641]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Nombre": "Es Carbó",
+      "Foto": "http://mw2.google.com/mw-panoramio/photos/small/1498524.jpg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.0155754089355464, 39.306907560120216]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Nombre": "S'Arenalet d'es Verger",
+      "Foto": "http://mw2.google.com/mw-panoramio/photos/small/53254738.jpg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.3796048164367676, 39.76555005082858]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Nombre": "Sa Canova",
+      "Foto": "http://mw2.google.com/mw-panoramio/photos/small/57654667.jpg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.247404098510742, 39.729831646409565]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "Nombre": "Formentor",
+      "Foto": "http://mw2.google.com/mw-panoramio/photos/small/73757660.jpg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.1394505500793457, 39.927855459756486]
+    }
+  }]
+}
