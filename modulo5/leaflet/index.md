@@ -8,7 +8,7 @@ folder: modulo5/leaflet
 
 <a href="http://leafletjs.com/" target="_blank">Leaflet</a> es una librería de código abierto para trabajar con mapas interactivos. Es fácil de programar, fácil de utilizar y con muy buen rendimiento. 
 
-Durante la transición de OpenLayers 2 a 3 que ha supuesto aproximadamente 2 años de trabajo (de 2011 a 2014), y gracias a su simplicidad se ha convertido en la librería de _web mapping_ preferida de los desarrolladores y proyectos fuera del área de conocimiento de los _sistemas de información geográfica_.
+Durante la transición de OpenLayers 2 a 3, que ha supuesto aproximadamente 2 años de trabajo (de 2011 a 2014), y gracias a su simplicidad se ha convertido en la librería de _web mapping_ preferida de los desarrolladores y proyectos fuera del área de conocimiento de los _sistemas de información geográfica_.
 
 ### Características
 El objetivo del proyecto es mantener una lista de <a href="http://leafletjs.com/features.html" target="_blank">funcionalidades</a> básicas para mantener la librería simple y de reducido tamaño.
@@ -428,7 +428,6 @@ También define dos eventos <a href="http://leafletjs.com/reference.html#map-loc
 </html>
 ```
 <a href="http://rawgit.com/xguaita/curso-javascript/master/modulo5/leaflet/location.html" target="_blank">Abrir en el navegador...</a>
-
 
 
   > **Ejercicio:** mapa con los 5 lugares del mundo que os gustaría visitar. Incluir fotos y mapa guía
