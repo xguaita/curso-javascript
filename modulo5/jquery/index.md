@@ -42,6 +42,13 @@ $(document).ready(function() {
   // Código a ejecutar
 });
 ```
+Podemos también verlo escrito de la siguiente forma:
+
+```javascript
+$(function() {
+  // Código a ejecutar
+});
+```
 Cuando el documento esté listo ejecuta el código. A diferencia del evento _onload_ del DOM, el evento _ready_ de JQuery no espera a que se carguen todas las imágenes  e _iframes_ de la página por lo que es mucho más rápido.
 
 La sintaxis básica de JQuery es ```$(selector).accion()```, seleccionar elementos para hacer algo con ellos, donde:
@@ -109,7 +116,7 @@ $('#caracId').children()
 $('#caracId').find('li')
 $('#caracId').find('li').eq(1)
 $('li:contains("32kb")').parent()
-$('li:contains("32kb")').closest( "li" )
+$('li:contains("32kb")').closest('li')
 $('#funcId').find('li').eq(1).prev()
 $('#funcId').find('li').eq(1).nextAll()
 ```
