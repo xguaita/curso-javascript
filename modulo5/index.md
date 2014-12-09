@@ -22,7 +22,7 @@ Probablemente exista una librería para cualquier programa que se quiera escribi
 Vamos a estudiar las siguientes librerías:
 
 ### [JQuery](./jquery/)
-Independencia del navegador y simplificación de acceso a objetos
+Independencia del navegador y simplificación de acceso a objetos del DOM
 
 ### [Sencha Ext JS](./extjs/)
 Interfaz de usuario, comunicación con el servidor, gestión de datos, _framework_ MVC...

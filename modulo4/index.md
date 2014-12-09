@@ -225,7 +225,7 @@ document.getElementById('miCelda').tagName
 document.getElementById('miCelda').innerHTML
 ```
 
-  > **Nota:** como cualquier objeto JavaScript podemos añadir dinámicamente propiedades a los objeos del DOM, que serán visibles únicamente en el programa 
+  > **Nota:** como cualquier objeto JavaScript podemos añadir dinámicamente propiedades a los objetos del DOM, que serán visibles únicamente en el programa 
 
 ### Atributos de elementos
 
@@ -250,8 +250,8 @@ document.getElementById('miCelda').removeAttribute('style')
 | `createElement(), createTextNode()`| Crea un nuevo elemento o nodo de texto, respectivamente | documento |  
 | `cloneNode()`| Copia un nodo | nodo |  
 | `appendChild(), removeChild()`| Añade/elimina un elemento | nodo |  
-| `insertBefore()`| Devuelve array con elementos de una clase (estilo CSS) | nodo |  
-| `replaceChild()`| Busca por consulta CSS3, devuelve el primer elemento encontrado o todos ellos | nodo |  
+| `insertBefore()`| Inserta un elemento antes que un determinado nodo hijo | nodo |  
+| `replaceChild()`| Reemplaza un nodo hijo por otro elemento | nodo |  
 
 En la consola:
 
@@ -278,7 +278,7 @@ Podemos dividir los eventos en dos grandes grupos:
 
 + Eventos de plataforma:  
   + Eventos de los objetos del DOM: `click`, `select`, `load`, `mousedown`, `keypress`, `focus`...  
-  + Eventos de HTML5: `loadstart`, `progress` (XMLHttpRequest), `success` (GeoLocation), `play, `volumechange` (video, audio)...   
+  + Eventos de HTML5: `loadstart`, `progress` (XMLHttpRequest), `success` (GeoLocation), `play`, `volumechange` (video, audio)...   
   + Pantallas táctiles y dispositivos móviles: `gesturestart`, `touchstart`, `touchend`...
 + Eventos de objetos de usurio. Por ejemplo, librería de _web mapping_: `zoomend`, `movestart`, `layeradd`, `baselayerchange`...
 
@@ -287,25 +287,29 @@ Las funciones que responden a los eventos se denominan _events handlers_ o _even
 
 Hay tres formas de asignar manejadores de eventos a elementos:
 
-+ En un atributo del propio tag html:  
++ En un atributo del propio tag html:
+
 ``` html
 <img id="img1" src='logo.png' onclick="alert('Mensaje')">
 ```
-+ Propiedad del elemento del DOM:  
++ Propiedad del elemento del DOM:
+
 ``` js
 document.getElementById('img1').onclick = function() {
   alert('Mensaje')
 };
 ```
-+ El método `addEventListener(evento, funcion, false)`:  
++ El método `addEventListener(evento, funcion, false)`:
+
 ``` js
 document.getElementById('img1').addEventListener('click', function() {
   alert('Mensaje')
 }, false);
 ```
+
   `removeEventListener()` elimina un manejador asignado a un elemento con `addEventListener()`.
 
-La función manejador siempre recibe un parámetro el objeto `event`. Este objeto siempre tiene una propiedad `type` que nos informa del tipo de evento. Dependiendo del tipo de evento puede tener propiedades adicionales. Por ejemplo el evento `click` añade las propiedades `target` (qué elemento ha recibido el click), `clientX/clientY` (coordenadas del ratón en el momento del click)...
+La función manejador recibe un parámetro, el objeto `event`. Este objeto siempre tiene una propiedad `type` que nos informa del tipo de evento. Dependiendo del tipo de evento puede tener propiedades adicionales. Por ejemplo el evento `click` añade las propiedades `target` (qué elemento ha recibido el click), `clientX/clientY` (coordenadas del ratón en el momento del click)...
 
 ### Propagación y captura de eventos
 Los eventos se propagan (_bubbling_) de las _hojas_ del árbol del DOM hacia la _raiz_. Mientras el evento se propaga hacia arriba todos los manejadores responderán al evento.
