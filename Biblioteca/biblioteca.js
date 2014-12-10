@@ -156,11 +156,12 @@ function Biblioteca(nombre) {
 	// Prestar libro con código a lector con dni
 	this.prestarLibro= function(codigo, dni) {
 		writeln('Falta!! Escribir código prestar libro');
-	}
+	};
 	
 	// devolver libro con código por lector con dni
 	this.devolverLibro= function(codigo, dni) {
 		writeln('Falta!! Escribir código devolver libro');
+	}
 }
 
 // FIN LIBRERÍA
