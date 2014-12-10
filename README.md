@@ -19,7 +19,7 @@ Demostración del uso de las librerías Extjs 4.2.1 y el patrón MVC en una apli
 
 ![](./images/weatherapp.png)
 
-<a href="http://rawgit.com/xguaita/curso-javascript/master/weatherapp/index.html" target="_blank">Abrir aplicación</a>
+<a href="http://rawgit.com/xguaita/curso-javascript/master/weatherapp/production/index.html" target="_blank">Abrir aplicación</a>
 
 
 
