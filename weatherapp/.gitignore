@@ -1,0 +1,13 @@
+# https://git-scm.com/docs/gitignore
+# https://help.github.com/articles/ignoring-files
+# Example .gitignore files: https://github.com/github/gitignore
+/build/
+/ext/
+/bootstrap.*
+/sass/example/bootstrap.js
+/sass/example/example.css
+/GeoExt/
+/.brackets.json
+/.todo
+/geoext2-2.0.2/
+*.db

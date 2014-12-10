@@ -1,0 +1,16 @@
+.weatherapp-header-panel {
+	background-color: #fff !important;
+	height: 130px;
+	width: 100%;
+	background-image: url("images/background.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	color: #157fcc;
+	font-weight: bold;
+	font-size: 72px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.olControlLayerSwitcher .layersDiv {
+    background-color: #157fcc !important;
+}
