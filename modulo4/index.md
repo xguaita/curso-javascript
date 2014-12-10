@@ -182,7 +182,7 @@ En la consola:
 
 ``` js
 document.body.children
-document.body.chilNodes
+document.body.childNodes
 document.body.firstChild
 document.body.firstChild.nextSibling
 document.body.lastChild.previousSibling
@@ -280,7 +280,7 @@ Podemos dividir los eventos en dos grandes grupos:
   + Eventos de los objetos del DOM: `click`, `select`, `load`, `mousedown`, `keypress`, `focus`...  
   + Eventos de HTML5: `loadstart`, `progress` (XMLHttpRequest), `success` (GeoLocation), `play`, `volumechange` (video, audio)...   
   + Pantallas táctiles y dispositivos móviles: `gesturestart`, `touchstart`, `touchend`...
-+ Eventos de objetos de usurio. Por ejemplo, librería de _web mapping_: `zoomend`, `movestart`, `layeradd`, `baselayerchange`...
++ Eventos de objetos de usuario. Por ejemplo, librería de _web mapping_: `zoomend`, `movestart`, `layeradd`, `baselayerchange`...
 
 ### Responder a eventos
 Las funciones que responden a los eventos se denominan _events handlers_ o _events listener_ (manejadores de eventos). Generalmente el nombre de la función es `on`+`nombre de evento` (`onChange`, `onLayerAdd`...).
