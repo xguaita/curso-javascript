@@ -85,12 +85,35 @@ function Biblioteca(nombre) {
 	
 	// Recupera los datos de un libro por codigo
 	this.buscaLibro= function(codigo) {
-		writeln('Falta!! Escribir código buscar por código');
+		for (var i= 0; i < this.libros.length; i++) {
+			if (this.libros[i].codigo == codigo) {
+				writeln('Título: ' + this.libros[i].titulo);
+				writeln('Autores: ' + this.libros[i].autores);
+				writeln('Año: ' + this.libros[i].year);
+				writeln('Editorial: ' + this.libros[i].editorial);
+				writeln('Ejemplares: ' + this.libros[i].ejemplares);
+				writeln('Prestado a: ' + this.libros[i].prestamos.join(', '));
+				return;
+			}
+		}
+		writeln('Error. No existe un libro con código ' + codigo);
 	};
 
 	// Recupera los datos de libros por título
 	this.buscaTituloLibro= function(titulo) {
-		writeln('Falta!! Escribir código buscar por título');
+		for (var i= 0; i < this.libros.length; i++) {
+			if (this.libros[i].titulo.toUpperCase().indexOf(titulo.toUpperCase()) !== -1) {
+				writeln('-----------------------------------------------');
+				writeln('Código: ' + this.libros[i].codigo);
+				writeln('Título: ' + this.libros[i].titulo);
+				writeln('Autores: ' + this.libros[i].autores);
+				writeln('Año: ' + this.libros[i].year);
+				writeln('Editorial: ' + this.libros[i].editorial);
+				writeln('Ejemplares: ' + this.libros[i].ejemplares);
+				writeln('Prestado a: ' + this.libros[i].prestamos.join(', '));
+				writeln('-----------------------------------------------');
+			}
+		}
 	};
 	
 	// Añade un libro a la colección
@@ -134,6 +157,7 @@ function Biblioteca(nombre) {
 			writeln('Nombre: ' + lector.nombre);
 			writeln('Libros en préstamo: ' + lector.prestamos.join(', '));
 		} else writeln('Error: El lector con dni ' + dni + ' no existe');
+
 	};
 	
 	// Alta de lector
@@ -155,12 +179,40 @@ function Biblioteca(nombre) {
 	
 	// Prestar libro con código a lector con dni
 	this.prestarLibro= function(codigo, dni) {
-		writeln('Falta!! Escribir código prestar libro');
-	};
+		var libro= this.existeLibro(codigo),
+		    lector= this.existeLector(dni);
+			
+		if (libro === null) {
+			writeln('Error: El libro con código ' + codigo + ' no existe');
+		} else if (lector === null) {
+			writeln('Error: El lector con dni ' + dni + ' no existe');
+		} else if (lector.tieneLibro(codigo) !== -1) {
+			writeln('Error: El lector con dni ' + dni + ' ya tiene este libro');
+		} else if (libro.ejemplares > libro.prestamos.length) {
+			libro.llevaLibro(dni);
+			lector.llevaLibro(codigo);
+			writeln('Préstamo realizado');
+		} else {
+			writeln('Error: No hay suficientes ejemplares');
+		}
+	}
 	
 	// devolver libro con código por lector con dni
 	this.devolverLibro= function(codigo, dni) {
-		writeln('Falta!! Escribir código devolver libro');
+		var libro= this.existeLibro(codigo),
+		    lector= this.existeLector(dni);
+			
+		if (libro === null) {
+			writeln('Error: El libro con código ' + codigo + ' no existe');
+		} else if (lector === null) {
+			writeln('Error: El lector con dni ' + dni + ' no existe');
+		} else if (lector.tieneLibro(codigo) === -1) {
+			writeln('Error: El lector con dni ' + dni + ' no tiene este libro');
+		} else {
+			libro.devuelveLibro(dni);
+			lector.devuelveLibro(codigo);
+			writeln('Devolución realizada');
+		}		
 	}
 }
 
