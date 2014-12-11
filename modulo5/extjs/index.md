@@ -30,6 +30,7 @@ Descargar e instalar <a href="http://git-scm.com/" target="_blank">git</a>, un g
 Descargar e instalar <a href="http://brackets.io/" target="_blank">Brackets</a>, un editor de texto pensado para el desarrollo de aplicaciones web: <a href="https://github.com/adobe/brackets/releases/download/release-1.0/Brackets.Release.1.0.msi" target="_blank">Brackets.Release.1.0.msi</a> :
 
 En Brackets, menú _File_ -> _Extension manager..._ e instalar las siguientes extensiones:
+
 + Beautify  
 + Brackets Git  
 + JSHint  

@@ -27,5 +27,5 @@ Independencia del navegador y simplificación de acceso a objetos del DOM
 ### [Sencha Ext JS](./extjs/)
 Interfaz de usuario, comunicación con el servidor, gestión de datos, _framework_ MVC...
 
-### [Leaflet](./leaflet/) y [Openlayers](./openlayers/)
+### [Leaflet](./leaflet/) y [Openlayers](./geoext/)
 Mapas interactivos
